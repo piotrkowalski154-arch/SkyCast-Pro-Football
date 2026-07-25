@@ -193,6 +193,31 @@
       padding: 10px 14px;
       border-radius: 8px;
     }
+    /* =========================================
+   PASEK HERBÓW W NAGŁÓWKU
+   ========================================= */
+.header-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Odstęp między herbami */
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.header-badge-img {
+  height: 32px; /* Stała wysokość ikon */
+  width: auto;
+  object-fit: contain; /* Gwarancja, że herb się nie zniekształci */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Lekkie powiększenie po najechaniu myszką */
+.header-badge-img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
+}
   </style>
 </head>
 

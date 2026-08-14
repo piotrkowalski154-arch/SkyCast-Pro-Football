@@ -720,19 +720,57 @@
   <!-- SKRYPT RADARU WIADOMOŚCI TRRS -->
   <script>
     function pobierzWiadomosci() {
-        const kontener = document.getElementById('radar-wiadomosci');
-        if (!kontener) return;
+  const kontener = document.getElementById('radar-wiadomosci');
+  const loadingEl = document.getElementById('radar-loading');
+  if (!kontener) return;
 
-        const rssEkstraklasa = 'https://sport.interia.pl/pilka-nozna/ekstraklasa/feed';    
-        const rssEuropa = 'https://sport.onet.pl/pilka-nozna/feed'; 
+  // 1. Definiujemy źródła RSS
+  const rssEkstraklasa = 'https://sport.interia.pl/pilka-nozna/ekstraklasa/feed';    
+  const rssEuropa = 'https://sport.onet.pl/pilka-nozna/feed'; 
+  const rssFlashscore = 'https://www.flashscore.pl/rss/news/';
 
-        Promise.all([
-            fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEkstraklasa)}`).then(r => r.json()),
-            fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEuropa)}`).then(r => r.json())
-        ])
-        .then(([daneEkstraklasa, daneEuropa]) => {
-            // Usuwamy tekst ładowania
-            document.getElementById('radar-loading').style.display = 'none';
+  // 2. Wystrzeliwujemy 3 zapytania naraz przez Promise.all
+  Promise.all([
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEkstraklasa)}`).then(r => r.json()),
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEuropa)}`).then(r => r.json()),
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFlashscore)}`).then(r => r.json())
+  ])
+  .then(([daneEkstraklasa, daneEuropa, daneFlashscore]) => {
+    // 3. Usuwamy komunikat ładowania
+    if (loadingEl) loadingEl.style.display = 'none';
+
+    // 4. TUTAJ SIĘ DOPISUJE LOGIKĘ:
+    kontener.innerHTML = ''; // Czyścimy kontener przed wstawieniem
+
+    // Zbieramy artykuły ze wszystkich 3 źródeł do jednej wspólnej listy
+    const wszystkieNewsy = [
+      ...(daneEkstraklasa.items || []),
+      ...(daneEuropa.items || []),
+      ...(daneFlashscore.items || [])
+    ];
+
+    // Bierzemy np. 6 najświeższych artykułów
+    const wybraneNewsy = wszystkieNewsy.slice(0, 6);
+
+    // Rysujemy każdy news w szklanej szafeczce
+    wybraneNewsy.forEach(artykul => {
+      kontener.innerHTML += `
+        <a href="${artykul.link}" target="_blank" class="rss-item">
+          <span class="rss-item-title">${artykul.title}</span>
+          <span class="rss-badge">PILNE</span>
+        </a>
+      `;
+    });
+  })
+  .catch(blad => {
+    // Nasz bezpiecznik w razie awarii sieci
+    console.error("Błąd pobierania RSS:", blad);
+    if (loadingEl) {
+      loadingEl.textContent = 'Radar chwilowo niedostępny 🛡️';
+      loadingEl.style.color = '#ff4b55';
+    }
+  });
+}
 
             let html = '';
 

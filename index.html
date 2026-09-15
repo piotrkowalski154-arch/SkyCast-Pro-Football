@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,6 @@
 
     body {
       min-height: 100vh;
-      /* Dwa tła naraz: 1. Ciemny gradient | 2. Zdjęcie stadionu nocą */
       background-image: 
         linear-gradient(135deg, rgba(5, 20, 35, 0.90), rgba(5, 35, 20, 0.85)),
         url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1920&q=80');
@@ -57,7 +56,7 @@
     }
 
     /* =========================================
-       NAGŁÓWEK GŁÓWNY (.HEADER)
+       2. NAGŁÓWEK GŁÓWNY (.HEADER)
        ========================================= */
     .header {
       display: flex; 
@@ -361,7 +360,6 @@
         box-shadow: 0 0 15px rgba(0, 170, 255, 0.15), inset 0 0 25px rgba(0, 170, 255, 0.15);
     }
     
-    /* Dodany CSS dla neonu WESZŁO! */
     .rss-flashscore-box {
         border: 1px solid rgba(255, 68, 68, 0.4);
         box-shadow: 0 0 15px rgba(255, 68, 68, 0.15), inset 0 0 25px rgba(255, 68, 68, 0.15);
@@ -419,7 +417,6 @@
         border: 1px solid rgba(0, 170, 255, 0.3);
     }
     
-    /* Dodany CSS dla odznaki WESZŁO! */
     .badge-wieszlo {
         background: rgba(255, 68, 68, 0.15); 
         color: #ff4444; 
@@ -459,7 +456,6 @@
     .tab-btn { background: rgba(25, 25, 30, 0.6); border: 1px solid rgba(255, 179, 71, 0.2); color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; white-space: nowrap; backdrop-filter: blur(5px); transition: all 0.3s ease; }
     .tab-btn.active { background: rgba(255, 179, 71, 0.15); border: 1px solid rgba(255, 179, 71, 0.8); color: #ffb347; box-shadow: 0 0 10px rgba(255, 179, 71, 0.2); }
     
-    /* Uzupełniony CSS dla struktury nowej tabeli na divach! */
     .table-header { display: flex; justify-content: space-between; padding: 10px 12px; font-size: 0.85rem; color: #ffb347; font-weight: bold; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 8px; }
     .col-pos { width: 25px; font-weight: bold; color: #ffb347; }
     .col-team { display: flex; align-items: center; gap: 10px; flex-grow: 1; color: #fff; font-weight: 500; font-size: 0.95rem; }
@@ -499,43 +495,138 @@
 
     <!-- STREFA TYPERA -->
     <section class="window typer-section">
-        <div class="section-title"><span class="fire-emoji">🔥</span> STREFA TYPERA: FAWORYCI SEZONU</div>
+        <div class="section-title">
+            <span class="fire-emoji">🔥</span> STREFA TYPERA: FAWORYCI SEZONU
+        </div>
         <p class="section-desc">Wybierz faworyta w każdej lidze, podaj swój Nick i dołącz do walki w Rankingu Społeczności!</p>
+
         <form id="typer-form">
-            <!-- (Tu zostawiłem Twoje kafelki bez zmian, bo działają z lokalnymi plikami PNG, które wgrasz) -->
+            <!-- 🇵🇱 PKO BP EKSTRAKLASA -->
             <div class="league-box">
                 <div class="league-header-title">
                     <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo">
                     <span>PKO BP EKSTRAKLASA</span>
                 </div>
                 <div class="teams-grid">
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Cracovia"><img src="cracovia.png" class="team-badge"><span class="team-name">Cracovia</span><div class="vote-bar"><div class="vote-fill" id="bar-Cracovia" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Wisła Kraków"><img src="wisla-krakow.png" class="team-badge"><span class="team-name">Wisła Kraków</span><div class="vote-bar"><div class="vote-fill" id="bar-Wisła Kraków" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Wieczysta Kraków"><img src="wieczysta-krakow.png" class="team-badge"><span class="team-name">Wieczysta Kraków</span><div class="vote-bar"><div class="vote-fill" id="bar-Wieczysta Kraków" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Legia Warszawa"><img src="legia-warszawa.png" class="team-badge"><span class="team-name">Legia Warszawa</span><div class="vote-bar"><div class="vote-fill" id="bar-Legia Warszawa" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Lech Poznań"><img src="lech-poznan.png" class="team-badge"><span class="team-name">Lech Poznań</span><div class="vote-bar"><div class="vote-fill" id="bar-Lech Poznań" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Raków Częstochowa"><img src="rakow-czestochowa.png" class="team-badge"><span class="team-name">Raków Częstochowa</span><div class="vote-bar"><div class="vote-fill" id="bar-Raków Częstochowa" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Jagiellonia Białystok"><img src="jagiellonia.png" class="team-badge"><span class="team-name">Jagiellonia</span><div class="vote-bar"><div class="vote-fill" id="bar-Jagiellonia Białystok" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Śląsk Wrocław"><img src="slask-wroclaw.png" class="team-badge"><span class="team-name">Śląsk Wrocław</span><div class="vote-bar"><div class="vote-fill" id="bar-Śląsk Wrocław" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Pogoń Szczecin"><img src="pogon-szczecin.png" class="team-badge"><span class="team-name">Pogoń Szczecin</span><div class="vote-bar"><div class="vote-fill" id="bar-Pogoń Szczecin" style="width: 0%;"></div></div></label>
-                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Górnik Zabrze"><img src="gornik-zabrze.png" class="team-badge"><span class="team-name">Górnik Zabrze</span><div class="vote-bar"><div class="vote-fill" id="bar-Górnik Zabrze" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Cracovia"><img src="cracovia.png" alt="Cracovia" class="team-badge"><span class="team-name">Cracovia</span><div class="vote-bar"><div class="vote-fill" id="bar-Cracovia" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Wisła Kraków"><img src="wisla-krakow.png" alt="Wisła Kraków" class="team-badge"><span class="team-name">Wisła Kraków</span><div class="vote-bar"><div class="vote-fill" id="bar-Wisła Kraków" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Wieczysta Kraków"><img src="wieczysta-krakow.png" alt="Wieczysta Kraków" class="team-badge"><span class="team-name">Wieczysta Kraków</span><div class="vote-bar"><div class="vote-fill" id="bar-Wieczysta Kraków" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Legia Warszawa"><img src="legia-warszawa.png" alt="Legia Warszawa" class="team-badge"><span class="team-name">Legia Warszawa</span><div class="vote-bar"><div class="vote-fill" id="bar-Legia Warszawa" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Lech Poznań"><img src="lech-poznan.png" alt="Lech Poznań" class="team-badge"><span class="team-name">Lech Poznań</span><div class="vote-bar"><div class="vote-fill" id="bar-Lech Poznań" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Raków Częstochowa"><img src="rakow-czestochowa.png" alt="Raków Częstochowa" class="team-badge"><span class="team-name">Raków Częstochowa</span><div class="vote-bar"><div class="vote-fill" id="bar-Raków Częstochowa" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Jagiellonia Białystok"><img src="jagiellonia.png" alt="Jagiellonia Białystok" class="team-badge"><span class="team-name">Jagiellonia</span><div class="vote-bar"><div class="vote-fill" id="bar-Jagiellonia Białystok" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Śląsk Wrocław"><img src="slask-wroclaw.png" alt="Śląsk Wrocław" class="team-badge"><span class="team-name">Śląsk Wrocław</span><div class="vote-bar"><div class="vote-fill" id="bar-Śląsk Wrocław" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Pogoń Szczecin"><img src="pogon-szczecin.png" alt="Pogoń Szczecin" class="team-badge"><span class="team-name">Pogoń Szczecin</span><div class="vote-bar"><div class="vote-fill" id="bar-Pogoń Szczecin" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_ekstraklasa" value="Górnik Zabrze"><img src="gornik-zabrze.png" alt="Górnik Zabrze" class="team-badge"><span class="team-name">Górnik Zabrze</span><div class="vote-bar"><div class="vote-fill" id="bar-Górnik Zabrze" style="width: 0%;"></div></div></label>
+                </div>
+            </div>
+
+            <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE -->
+            <div class="league-box">
+                <div class="league-header-title">
+                    <img src="premier-league-logo.png" alt="Premier League" class="league-mini-logo">
+                    <span>PREMIER LEAGUE</span>
+                </div>
+                <div class="teams-grid">
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Man City"><img src="man-city.png" alt="Man City" class="team-badge"><span class="team-name">Man City</span><div class="vote-bar"><div class="vote-fill" id="bar-Man City" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Arsenal FC"><img src="arsenal.png" alt="Arsenal" class="team-badge"><span class="team-name">Arsenal FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Arsenal FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Liverpool FC"><img src="liverpool.png" alt="Liverpool" class="team-badge"><span class="team-name">Liverpool FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Liverpool FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Aston Villa"><img src="aston-villa.png" alt="Aston Villa" class="team-badge"><span class="team-name">Aston Villa</span><div class="vote-bar"><div class="vote-fill" id="bar-Aston Villa" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Tottenham Hotspur"><img src="tottenham.png" alt="Tottenham" class="team-badge"><span class="team-name">Tottenham</span><div class="vote-bar"><div class="vote-fill" id="bar-Tottenham Hotspur" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Chelsea FC"><img src="chelsea.png" alt="Chelsea" class="team-badge"><span class="team-name">Chelsea FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Chelsea FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Man United"><img src="man-united.png" alt="Man United" class="team-badge"><span class="team-name">Man United</span><div class="vote-bar"><div class="vote-fill" id="bar-Man United" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Newcastle United"><img src="newcastle_256x256.football-logos.cc.png" alt="Newcastle" class="team-badge"><span class="team-name">Newcastle</span><div class="vote-bar"><div class="vote-fill" id="bar-Newcastle United" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="West Ham United"><img src="west-ham_256x256.football-logos.cc.png" alt="West Ham" class="team-badge"><span class="team-name">West Ham</span><div class="vote-bar"><div class="vote-fill" id="bar-West Ham United" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_premier" value="Leicester City"><img src="leicester_256x256.football-logos.cc.png" alt="Leicester" class="team-badge"><span class="team-name">Leicester</span><div class="vote-bar"><div class="vote-fill" id="bar-Leicester City" style="width: 0%;"></div></div></label>
+                </div>
+            </div>
+
+            <!-- 🇪🇸 LA LIGA -->
+            <div class="league-box">
+                <div class="league-header-title">
+                    <img src="la-liga-logo.png" alt="La Liga" class="league-mini-logo">
+                    <span>LA LIGA EA SPORTS</span>
+                </div>
+                <div class="teams-grid">
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Real Madryt"><img src="real-madryt.png" alt="Real Madryt" class="team-badge"><span class="team-name">Real Madryt</span><div class="vote-bar"><div class="vote-fill" id="bar-Real Madryt" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="FC Barcelona"><img src="barcelona.png" alt="Barcelona" class="team-badge"><span class="team-name">FC Barcelona</span><div class="vote-bar"><div class="vote-fill" id="bar-FC Barcelona" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Atlético Madryt"><img src="atletico-madryt.png" alt="Atletico Madryt" class="team-badge"><span class="team-name">Atlético Madryt</span><div class="vote-bar"><div class="vote-fill" id="bar-Atlético Madryt" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Athletic Bilbao"><img src="athletic-bilbao.png" alt="Athletic Bilbao" class="team-badge"><span class="team-name">Athletic Bilbao</span><div class="vote-bar"><div class="vote-fill" id="bar-Athletic Bilbao" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Real Sociedad"><img src="real-sociedad.png" alt="Real Sociedad" class="team-badge"><span class="team-name">Real Sociedad</span><div class="vote-bar"><div class="vote-fill" id="bar-Real Sociedad" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Girona FC"><img src="girona.png" alt="Girona FC" class="team-badge"><span class="team-name">Girona FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Girona FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Real Betis"><img src="real-betis.png" alt="Real Betis" class="team-badge"><span class="team-name">Real Betis</span><div class="vote-bar"><div class="vote-fill" id="bar-Real Betis" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Sevilla FC"><img src="sevilla_256x256.football-logos.cc.png" alt="Sevilla FC" class="team-badge"><span class="team-name">Sevilla FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Sevilla FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="Valencia CF"><img src="valencia_256x256.football-logos.cc.png" alt="Valencia CF" class="team-badge"><span class="team-name">Valencia CF</span><div class="vote-bar"><div class="vote-fill" id="bar-Valencia CF" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_laliga" value="RCD Espanyol"><img src="espanyol.png" alt="RCD Espanyol" class="team-badge"><span class="team-name">RCD Espanyol</span><div class="vote-bar"><div class="vote-fill" id="bar-RCD Espanyol" style="width: 0%;"></div></div></label>
+                </div>
+            </div>
+
+            <!-- 🇩🇪 BUNDESLIGA -->
+            <div class="league-box">
+                <div class="league-header-title">
+                    <img src="bundesliga-logo.png" alt="Bundesliga" class="league-mini-logo">
+                    <span>BUNDESLIGA</span>
+                </div>
+                <div class="teams-grid">
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="Bayern Monachium"><img src="bayern-monachium.png" alt="Bayern Monachium" class="team-badge"><span class="team-name">Bayern</span><div class="vote-bar"><div class="vote-fill" id="bar-Bayern Monachium" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="Bayer Leverkusen"><img src="bayer-leverkusen.png" alt="Bayer Leverkusen" class="team-badge"><span class="team-name">Leverkusen</span><div class="vote-bar"><div class="vote-fill" id="bar-Bayer Leverkusen" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="BVB Dortmund"><img src="borussia-dortmund.png" alt="Borussia Dortmund" class="team-badge"><span class="team-name">BVB Dortmund</span><div class="vote-bar"><div class="vote-fill" id="bar-BVB Dortmund" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="RB Leipzig"><img src="rb-leipzig.png" alt="RB Leipzig" class="team-badge"><span class="team-name">RB Leipzig</span><div class="vote-bar"><div class="vote-fill" id="bar-RB Leipzig" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="VfB Stuttgart"><img src="stuttgart.png" alt="VfB Stuttgart" class="team-badge"><span class="team-name">Stuttgart</span><div class="vote-bar"><div class="vote-fill" id="bar-VfB Stuttgart" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="Eintracht Frankfurt"><img src="eintracht-frankfurt.png" alt="Eintracht Frankfurt" class="team-badge"><span class="team-name">Eintracht</span><div class="vote-bar"><div class="vote-fill" id="bar-Eintracht Frankfurt" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="TSG Hoffenheim"><img src="hoffenheim.png" alt="Hoffenheim" class="team-badge"><span class="team-name">Hoffenheim</span><div class="vote-bar"><div class="vote-fill" id="bar-TSG Hoffenheim" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="Holstein Kiel"><img src="holstein-kiel.png" alt="Holstein Kiel" class="team-badge"><span class="team-name">Holstein Kiel</span><div class="vote-bar"><div class="vote-fill" id="bar-Holstein Kiel" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="Werder Brema"><img src="werder-brema.png" alt="Werder Brema" class="team-badge"><span class="team-name">Werder Brema</span><div class="vote-bar"><div class="vote-fill" id="bar-Werder Brema" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_bundesliga" value="FC St. Pauli"><img src="st-pauli.png" alt="FC St. Pauli" class="team-badge"><span class="team-name">St. Pauli</span><div class="vote-bar"><div class="vote-fill" id="bar-FC St. Pauli" style="width: 0%;"></div></div></label>
                 </div>
             </div>
             
-            <!-- Reszta LIG Typera ukryta dla czytelności kodu (Zastąp to z powrotem kodem z ligami) -->
-            <div style="color: #00ffcc; text-align: center; margin: 10px 0;">[Tutaj wklej resztę swoich lig Typera z pliku]</div>
+            <!-- 🇮🇹 SERIE A -->
+            <div class="league-box">
+                <div class="league-header-title">
+                    <img src="serie-a-logo.png" alt="Serie A" class="league-mini-logo">
+                    <span>SERIE A</span>
+                </div>
+                <div class="teams-grid">
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="Inter Mediolan"><img src="inter-mediolan.png" alt="Inter Mediolan" class="team-badge"><span class="team-name">Inter Mediolan</span><div class="vote-bar"><div class="vote-fill" id="bar-Inter Mediolan" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="AC Milan"><img src="ac-milan.png" alt="AC Milan" class="team-badge"><span class="team-name">AC Milan</span><div class="vote-bar"><div class="vote-fill" id="bar-AC Milan" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="Juventus Turyn"><img src="juventus.png" alt="Juventus Turyn" class="team-badge"><span class="team-name">Juventus Turyn</span><div class="vote-bar"><div class="vote-fill" id="bar-Juventus Turyn" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="Atalanta Bergamo"><img src="atalanta.png" alt="Atalanta" class="team-badge"><span class="team-name">Atalanta</span><div class="vote-bar"><div class="vote-fill" id="bar-Atalanta Bergamo" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="SSC Napoli"><img src="napoli.png" alt="SSC Napoli" class="team-badge"><span class="team-name">SSC Napoli</span><div class="vote-bar"><div class="vote-fill" id="bar-SSC Napoli" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="AS Roma"><img src="as-roma.png" alt="AS Roma" class="team-badge"><span class="team-name">AS Roma</span><div class="vote-bar"><div class="vote-fill" id="bar-AS Roma" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="S.S. Lazio"><img src="lazio.png" alt="S.S. Lazio" class="team-badge"><span class="team-name">S.S. Lazio</span><div class="vote-bar"><div class="vote-fill" id="bar-S.S. Lazio" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="ACF Fiorentina"><img src="fiorentina.png" alt="ACF Fiorentina" class="team-badge"><span class="team-name">Fiorentina</span><div class="vote-bar"><div class="vote-fill" id="bar-ACF Fiorentina" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="Bologna FC"><img src="bologna.png" alt="Bologna FC" class="team-badge"><span class="team-name">Bologna FC</span><div class="vote-bar"><div class="vote-fill" id="bar-Bologna FC" style="width: 0%;"></div></div></label>
+                    <label class="team-card"><input type="radio" name="faworyt_seriea" value="Como 1907"><img src="como.png" alt="Como 1907" class="team-badge"><span class="team-name">Como 1907</span><div class="vote-bar"><div class="vote-fill" id="bar-Como 1907" style="width: 0%;"></div></div></label>
+                </div>
+            </div>
 
+            <!-- STREFA PODPISU I WYSYŁKI -->
             <div class="typer-action-box">
                 <input type="text" id="user-nick" class="typer-input" placeholder="Wpisz swój Nick (np. Piotrek_Krakow)" required>
                 <button type="submit" class="typer-btn">ZAPISZ TYPY I DOŁĄCZ DO RANKINGU 🚀</button>
             </div>
         </form>
+
         <hr class="divider">
+
+        <!-- TABELA RANKINGU SPOŁECZNOŚCI -->
         <div class="ranking-box">
-            <h3 class="ranking-title">🏆 TOP TYPERZY SPOŁECZNOŚCI</h3>
+            <h3 class="ranking-title">🏆 TOP TYPERZY SPOŁECZNOŚCI (OSTATNIE AKTYWNOŚCI)</h3>
             <table class="ranking-table">
-                <thead><tr><th>#</th><th>Nick Typera</th><th>Główny Faworyt</th><th>Data Zgłoszenia</th></tr></thead>
-                <tbody id="ranking-list"><tr><td colspan="4" style="text-align: center; color: #a0aec0;">Ładowanie danych...</td></tr></tbody>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nick Typera</th>
+                        <th>Główny Faworyt</th>
+                        <th>Data Zgłoszenia</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-list">
+                    <tr>
+                        <td colspan="4" style="text-align: center; color: #a0aec0;">Ładowanie danych z bazy Firebase...</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </section>
@@ -543,38 +634,83 @@
     <!-- RADAR WIADOMOŚCI SKYCAST PRO (TICKER) -->
     <div id="radar-wiadomosci" class="wiadomosci">
         <h3 style="color: #ffffff; text-align: center; margin-bottom: 20px; font-size: 1.3rem; font-weight: 900; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 16px; letter-spacing: 1px; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">
-            RADAR WIADOMOŚCI 📡<br><span style="color: #00ffcc; font-size: 0.85rem; letter-spacing: 2px;">EKSTRAKLASA • LIGI ZAGRANICZNE</span>
+            RADAR WIADOMOŚCI 📡<br>
+            <span style="color: #00ffcc; font-size: 0.85rem; letter-spacing: 2px;">EKSTRAKLASA • LIGI ZAGRANICZNE</span>
         </h3>
-        <p id="radar-loading" style="text-align: center; color: #ffffff; font-weight: bold; margin: 20px 0;">Skanowanie radarów informacyjnych... 📡</p>
+        
+        <p id="radar-loading" style="text-align: center; color: #ffffff; font-weight: bold; margin: 20px 0; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+            Skanowanie radarów informacyjnych... 📡
+        </p>
     </div>
 
     <!-- ================= STREFA WIDEO: SKRÓTY MECZÓW ================= -->
     <section class="window video-section">
-      <div class="section-title"><span class="fire-emoji">📺</span> STREFA WIDEO: SKRÓTY I BRAMKI</div>
+      <div class="section-title">
+        <span class="fire-emoji">📺</span> STREFA WIDEO: SKRÓTY I BRAMKI
+      </div>
       <p class="section-desc">Najnowsze akcje z europejskich boisk – Otwarta Garda w praktyce!</p>
+
       <div class="video-grid">
+        
+        <!-- KARTA WIDEO 1: EKSTRAKLASA -->
         <div class="video-card glass-panel">
-          <div class="video-header"><img src="ekstraklasa-logo.png" class="video-league-logo"><span class="video-league-name extra-neon">HIT EKSTRAKLASY</span></div>
-          <div class="iframe-container"><iframe src="https://www.youtube.com/embed/TwojLinkZYouTube1" frameborder="0" allowfullscreen></iframe></div>
-          <div class="video-match-title"><img src="lech-poznan.png" class="tiny-logo"> Lech vs Legia <img src="legia-warszawa.png" class="tiny-logo"></div>
+          <div class="video-header">
+            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="video-league-logo">
+            <span class="video-league-name extra-neon">HIT EKSTRAKLASY</span>
+          </div>
+          <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/TwojLinkZYouTube1" title="Skrót meczu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-match-title">
+            <img src="lech-poznan.png" class="tiny-logo"> Lech vs Legia <img src="legia-warszawa.png" class="tiny-logo">
+          </div>
         </div>
+
+        <!-- KARTA WIDEO 2: PREMIER LEAGUE -->
+        <div class="video-card glass-panel">
+          <div class="video-header">
+            <img src="premier-league-logo.png" alt="Premier League" class="video-league-logo">
+            <span class="video-league-name premier-neon">PREMIER LEAGUE</span>
+          </div>
+          <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/TwojLinkZYouTube2" title="Skrót meczu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-match-title">
+            <img src="arsenal.png" class="tiny-logo"> Arsenal vs Man City <img src="man-city.png" class="tiny-logo">
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- ================= SEKCJA TABEL LIGOWYCH (DRUGA KOMORA SERCA) ================= -->
     <div class="window league-tables-container">
-      <div class="section-title"><span class="fire-emoji">📊</span> TABELE LIGOWE (SEZON 2026/2027)</div>
+      
+      <div class="section-title">
+        <span class="fire-emoji">📊</span> TABELE LIGOWE (SEZON 2026/2027)
+      </div>
       <p class="section-desc">Aktualne zestawienia i punkty – fundament do analizy meczów.</p>
 
+      <!-- PRZEŁĄCZNIK LIG (ZAKŁADKI) -->
       <div class="league-tabs tabs-container">
-        <button class="tab-btn active" onclick="openLeague(event, 'tabela-ekstraklasa')"><img src="ekstraklasa-logo.png" style="height: 16px; margin-right: 5px;"> Ekstraklasa</button>
-        <button class="tab-btn" onclick="openLeague(event, 'tabela-premier')"><img src="premier-league-logo.png" style="height: 16px; margin-right: 5px;"> Premier League</button>
-        <button class="tab-btn" onclick="openLeague(event, 'tabela-laliga')"><img src="la-liga-logo.png" style="height: 16px; margin-right: 5px;"> La Liga</button>
-        <button class="tab-btn" onclick="openLeague(event, 'tabela-bundesliga')"><img src="bundesliga-logo.png" style="height: 16px; margin-right: 5px;"> Bundesliga</button>
-        <button class="tab-btn" onclick="openLeague(event, 'tabela-seriea')"><img src="serie-a-logo.png" style="height: 16px; margin-right: 5px;"> Serie A</button>
+        <button class="tab-btn active" onclick="openLeague(event, 'tabela-ekstraklasa')">
+          <img src="ekstraklasa-logo.png" style="height: 16px; margin-right: 5px;"> Ekstraklasa
+        </button>
+        <button class="tab-btn" onclick="openLeague(event, 'tabela-premier')">
+          <img src="premier-league-logo.png" style="height: 16px; margin-right: 5px;"> Premier League
+        </button>
+        <button class="tab-btn" onclick="openLeague(event, 'tabela-laliga')">
+          <img src="la-liga-logo.png" style="height: 16px; margin-right: 5px;"> La Liga
+        </button>
+        <button class="tab-btn" onclick="openLeague(event, 'tabela-bundesliga')">
+          <img src="bundesliga-logo.png" style="height: 16px; margin-right: 5px;"> Bundesliga
+        </button>
+        <button class="tab-btn" onclick="openLeague(event, 'tabela-seriea')">
+          <img src="serie-a-logo.png" style="height: 16px; margin-right: 5px;"> Serie A
+        </button>
       </div>  
 
-      <!-- 🇵🇱 TABELA: EKSTRAKLASA (Z NAPRAWIONYMI HERBAMI WIKIMEDIA!) -->
+      <!-- 🇵🇱 TABELA: EKSTRAKLASA -->
       <div id="tabela-ekstraklasa" class="table-wrapper">
         <div class="table-header">
           <span class="col-pos">#</span>
@@ -694,14 +830,31 @@
       </div>
 
       <!-- KONTENERY NA POZOSTAŁE LIGI -->
-      <div id="tabela-premier" class="table-wrapper" style="display: none;"><div style="text-align: center; color: var(--accent-gold); padding: 20px;"><span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Premier League...</div></div>
-      <div id="tabela-laliga" class="table-wrapper" style="display: none;"><div style="text-align: center; color: var(--accent-gold); padding: 20px;"><span class="fire-emoji">⏳</span> Trwa ładowanie tabeli La Ligi...</div></div>
-      <div id="tabela-bundesliga" class="table-wrapper" style="display: none;"><div style="text-align: center; color: var(--accent-gold); padding: 20px;"><span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Bundesligi...</div></div>
-      <div id="tabela-seriea" class="table-wrapper" style="display: none;"><div style="text-align: center; color: var(--accent-gold); padding: 20px;"><span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Serie A...</div></div>
+      <div id="tabela-premier" class="table-wrapper" style="display: none;">
+        <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+          <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Premier League...
+        </div>
+      </div>
+      <div id="tabela-laliga" class="table-wrapper" style="display: none;">
+        <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+          <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli La Ligi...
+        </div>
+      </div>
+      <div id="tabela-bundesliga" class="table-wrapper" style="display: none;">
+        <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+          <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Bundesligi...
+        </div>
+      </div>
+      <div id="tabela-seriea" class="table-wrapper" style="display: none;">
+        <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+          <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Serie A...
+        </div>
+      </div>
+
     </div>
   </div>
-     
-  <!-- ================= FIREBASE SDK (BEZ FUNKCJI ZAKŁADEK!) ================= -->
+
+  <!-- ================= FIREBASE SDK & INTEGRACJA LEAGUE VOTING ================= -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
@@ -729,55 +882,184 @@
       if (!nick) return alert('Wpisz swój Nick!');
 
       const selectedEkstraklasa = document.querySelector('input[name="faworyt_ekstraklasa"]:checked')?.value || 'Brak';
-      // ... reszta logiki zapisu działa! ...
-      const voteData = { nick: nick, faworyci: { ekstraklasa: selectedEkstraklasa }, timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'}) };
+      const selectedPremier = document.querySelector('input[name="faworyt_premier"]:checked')?.value || 'Brak';
+      const selectedLaLiga = document.querySelector('input[name="faworyt_laliga"]:checked')?.value || 'Brak';
+      const selectedBundesliga = document.querySelector('input[name="faworyt_bundesliga"]:checked')?.value || 'Brak';
+      const selectedSerieA = document.querySelector('input[name="faworyt_seriea"]:checked')?.value || 'Brak';
 
-      push(ref(db, 'votes'), voteData).then(() => { alert('Ogień! Twoje typy zostały zapisane w chmurze! 🚀'); form.reset(); });
+      const voteData = {
+        nick: nick,
+        faworyci: {
+          ekstraklasa: selectedEkstraklasa,
+          premierLeague: selectedPremier,
+          laLiga: selectedLaLiga,
+          bundesliga: selectedBundesliga,
+          serieA: selectedSerieA
+        },
+        timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'})
+      };
+
+      push(ref(db, 'votes'), voteData)
+        .then(() => {
+          alert('Ogień! Twoje typy zostały zapisane w chmurze Firebase! 🚀');
+          form.reset();
+        })
+        .catch((err) => alert('Błąd zapisu: ' + err.message));
     });
 
     // ODBIERANIE GŁOSÓW
     const votesRef = ref(db, 'votes');
     onValue(votesRef, (snapshot) => {
       const data = snapshot.val();
-      if (!data) return;
-      
+      if (!data) {
+        rankingList.innerHTML = '<tr><td colspan="4" style="text-align: center;">Brak oddanych głosów. Bądź pierwszy!</td></tr>';
+        return;
+      }
+
       const voteEntries = Object.values(data);
+      const totalVotes = voteEntries.length;
+      const teamCounts = {};
+
+      voteEntries.forEach((entry) => {
+        Object.values(entry.faworyci).forEach((teamName) => {
+          if (teamName !== 'Brak') {
+            teamCounts[teamName] = (teamCounts[teamName] || 0) + 1;
+          }
+        });
+      });
+
+      Object.keys(teamCounts).forEach((teamName) => {
+        const barElement = document.getElementById(`bar-${teamName}`);
+        if (barElement) {
+          const percentage = Math.round((teamCounts[teamName] / totalVotes) * 100);
+          barElement.style.width = `${percentage}%`;
+        }
+      });
+
       rankingList.innerHTML = '';
       const recentVotes = voteEntries.slice(-5).reverse();
       recentVotes.forEach((entry, index) => {
-        const row = `<tr><td>#${index + 1}</td><td><strong>${entry.nick}</strong></td><td>🇵🇱 ${entry.faworyci.ekstraklasa}</td><td><span class="accuracy-badge">${entry.timestamp}</span></td></tr>`;
+        const row = `
+          <tr>
+            <td>#${index + 1}</td>
+            <td><strong>${entry.nick}</strong></td>
+            <td>🇵🇱 ${entry.faworyci.ekstraklasa} / 🇪🇸 ${entry.faworyci.laLiga}</td>
+            <td><span class="accuracy-badge">${entry.timestamp}</span></td>
+          </tr>
+        `;
         rankingList.innerHTML += row;
       });
     });
 
-    // POBIERANIE RSS
+    // RADAR WIADOMOŚCI - ORYGINALNY Z PROMISE.ALL
     function pobierzWiadomosci() {
-      // (Twoja funkcja pobierzWiadomości zostaje tutaj, działa perfekcyjnie!)
       const kontener = document.getElementById('radar-wiadomosci');
       if (!kontener) return;
+
+      const rssEkstraklasa = 'https://sport.interia.pl/pilka-nozna/ekstraklasa/feed';    
+      const rssEuropa = 'https://sport.onet.pl/pilka-nozna/feed'; 
       const rssWeszlo = 'https://weszlo.com/feed/';
-      fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssWeszlo)}`).then(r => r.json())
-      .then((daneWeszlo) => {
+
+      Promise.all([
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEkstraklasa)}`).then(r => r.json()),
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssEuropa)}`).then(r => r.json()),
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssWeszlo)}`).then(r => r.json())
+      ])
+      .then(([daneEkstraklasa, daneEuropa, daneWeszlo]) => {
+        // 1. Ukrywamy napis ładowania
         const loading = document.getElementById('radar-loading');
         if (loading) loading.style.display = 'none';
-        
+
+        // 2. Czyścimy poprzednie paski przed wstawieniem świeżych
+        kontener.querySelectorAll('.rss-container').forEach(pasek => pasek.remove());
+
         let html = '';
-        if (daneWeszlo.status === 'ok' && daneWeszlo.items) {
-          const limit = Math.min(daneWeszlo.items.length, 5);
-          html += `<div class="rss-container rss-flashscore-box"><div class="rss-track">`;
-          for(let i= 0; i < limit; i++) {
-            html += `<div class="rss-item"><span class="rss-badge badge-wieszlo">📰 WESZŁO</span><a href="${daneWeszlo.items[i].link}" target="_blank" class="rss-item-link">${daneWeszlo.items[i].title}</a></div>`;
+
+        // ==========================================
+        // 1. TAŚMOCIĄG EKSTRAKLASY (Zielone podświetlenie)
+        // ==========================================
+        if (daneEkstraklasa.status === 'ok' && daneEkstraklasa.items) {
+          const limit = Math.min(daneEkstraklasa.items.length, 5);
+          html += `<div class="rss-container rss-ekstraklasa-box"><div class="rss-track">`;
+          
+          for (let i = 0; i < limit; i++) {
+            html += `
+              <div class="rss-item">
+                <span class="rss-badge badge-ekstraklasa">
+                  <img src="ekstraklasa-logo.png" alt="Ekstraklasa"> 🇵🇱 EKSTRAKLASA
+                </span>
+                <a href="${daneEkstraklasa.items[i].link}" target="_blank" class="rss-item-link">
+                  ${daneEkstraklasa.items[i].title}
+                </a>
+              </div>`;
           }
           html += `</div></div>`;
         }
+
+        // ==========================================
+        // 2. TAŚMOCIĄG EUROPY (Niebieskie podświetlenie)
+        // ==========================================
+        if (daneEuropa.status === 'ok' && daneEuropa.items) {
+          const limit = Math.min(daneEuropa.items.length, 5);
+          html += `<div class="rss-container rss-europa-box"><div class="rss-track">`;
+          
+          for (let i = 0; i < limit; i++) {
+            html += `
+              <div class="rss-item">
+                <span class="rss-badge badge-europa">
+                  <img src="premier-league-logo.png" alt="Premier">
+                  <img src="la-liga-logo.png" alt="LaLiga">
+                  <img src="bundesliga-logo.png" alt="Bundesliga">
+                  🌍 LIGI ZAGRANICZNE
+                </span>
+                <a href="${daneEuropa.items[i].link}" target="_blank" class="rss-item-link">
+                  ${daneEuropa.items[i].title}
+                </a>
+              </div>`;
+          }
+          html += `</div></div>`;
+        }
+
+        // ==========================================
+        // 3. TAŚMOCIĄG WESZŁO (Czerwone podświetlenie)
+        // ==========================================
+        if (daneWeszlo.status === 'ok' && daneWeszlo.items) {
+          const limit = Math.min(daneWeszlo.items.length, 5);
+          html += `<div class="rss-container rss-flashscore-box"><div class="rss-track">`;
+
+          for(let i= 0; i < limit; i++) {
+            html += `
+              <div class="rss-item">
+                <span class="rss-badge badge-wieszlo">
+                  <img src="channels4_profile.jpg" alt="Weszlo"> 📰 WESZŁO
+                </span>
+                <a href="${daneWeszlo.items[i].link}" target="_blank" class="rss-item-link">
+                  ${daneWeszlo.items[i].title}
+                </a>
+              </div>`;
+          }
+          html += `</div></div>`;
+        }
+
+        // 3. Wstrzykujemy paski do radaru
         kontener.innerHTML += html;
+      })
+      .catch(error => {
+        console.error('Błąd TRRS:', error);
+        const loading = document.getElementById('radar-loading');
+        if (loading) {
+          loading.style.display = 'block';
+          loading.innerHTML = '<span style="color: #ff4444;">Nie udało się pobrać radaru wiadomości. Spróbuj odświeżyć stronę.</span>';
+        }
       });
     }
+
+    // Odpalamy przy załadowaniu i co 5 minut
     pobierzWiadomosci();
     setInterval(pobierzWiadomosci, 300000);
   </script>
 
-  <!-- ================= ODDZIELNY SKRYPT NA ZAKŁADKI (TUTAJ MUSI BYĆ!) ================= -->
+  <!-- ================= SKRYPT OD ZAKŁADEK (POZA MODULE) ================= -->
   <script>
     function openLeague(evt, leagueId) {
       // 1. Ukrywamy wszystkie kontenery z ligami

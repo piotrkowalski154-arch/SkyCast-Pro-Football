@@ -830,232 +830,234 @@
 
   <!-- 🇵🇱 TABELA: EKSTRAKLASA (PO 3 KOLEJKACH) -->
 <!-- GŁÓWNY KONTENER EKSTRAKLASY -->
-<div id="tabela-ekstraklasa" class="table-wrapper">
+<div id="tabela-ekstraklasa" class="team-row">
   
   <!-- BURSZTYNOWY NAGŁÓWEK TABELI -->
-  <div style="display: flex; justify-content: space-between; padding: 10px 12px; font-size: 0.85rem; color: var(--accent-gold); font-weight: bold; border-bottom: 1px solid var(--glass-border); margin-bottom: 8px;">
-    <span style="width: 25px;">#</span>
-    <span style="flex-grow: 1; text-align: left; padding-left: 10px;">KLUB</span>
-    <span style="width: 30px; text-align: center;">M</span>
-    <span style="width: 55px; text-align: center;">BRAMKI</span>
-    <span style="width: 35px; text-align: right;">PKT</span>
+  <div class="table-header">
+    <span class="col-pos">#</span>
+    <span class="col-team" style="padding-left: 10px;">KLUB</span>
+    <span class="col-m">M</span>
+    <span class="col-goals">BRAMKI</span>
+    <span class="col-pts">PKT</span>
   </div>
 
   <!-- 1. GÓRNIK ZABRZE -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">1</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/G%C3%B3rnik_Zabrze_logo.svg" alt="Górnik Zabrze" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Górnik Zabrze</span>
+  <div class="team-row">
+    <span class="col-pos">1</span>
+    <div class="col-team">
+      <img src="img/gornik.png" alt="Górnik">
+      <span>Górnik Zabrze</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">14:7</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">18</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">14:7</span>
+    <span class="col-pts">18</span>
   </div>
 
   <!-- 2. LEGIA WARSZAWA -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">2</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Legia_Warszawa_logo.svg" alt="Legia Warszawa" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Legia Warszawa</span>
+  <div class="team-row">
+    <span class="col-pos">2</span>
+    <div class="col-team">
+      <img src="img/legia.png" alt="Legia">
+      <span>Legia Warszawa</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">16:9</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">16</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">16:9</span>
+    <span class="col-pts">16</span>
   </div>
 
   <!-- 3. LECH POZNAŃ -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">3</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/KKS_Lech_Pozna%C5%84_logo.svg" alt="Lech Poznań" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Lech Poznań</span>
+  <div class="team-row">
+    <span class="col-pos">3</span>
+    <div class="col-team">
+      <img src="img/lech.png" alt="Lech">
+      <span>Lech Poznań</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">12:5</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">16</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">12:5</span>
+    <span class="col-pts">16</span>
   </div>
 
   <!-- 4. WISŁA KRAKÓW -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">4</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Wisla_Krakow_logo.svg" alt="Wisła Kraków" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Wisła Kraków</span>
+  <div class="team-row">
+    <span class="col-pos">4</span>
+    <div class="col-team">
+      <img src="img/wisla.png" alt="Wisła">
+      <span>Wisła Kraków</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">15:10</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">14</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">15:10</span>
+    <span class="col-pts">14</span>
   </div>
 
   <!-- 5. PIAST GLIWICE -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">5</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Piast_Gliwice_logo.svg" alt="Piast Gliwice" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Piast Gliwice</span>
+  <div class="team-row">
+    <span class="col-pos">5</span>
+    <div class="col-team">
+      <img src="img/piast.png" alt="Piast">
+      <span>Piast Gliwice</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">13:10</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">13</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">13:10</span>
+    <span class="col-pts">13</span>
   </div>
 
   <!-- 6. POGOŃ SZCZECIN -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">6</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Pogon_Szczecin_logo.svg" alt="Pogoń Szczecin" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Pogoń Szczecin</span>
+  <div class="team-row">
+    <span class="col-pos">6</span>
+    <div class="col-team">
+      <img src="img/pogon.png" alt="Pogoń">
+      <span>Pogoń Szczecin</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">12:10</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">12</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">12:10</span>
+    <span class="col-pts">12</span>
   </div>
 
   <!-- 7. KORONA KIELCE -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">7</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Korona_Kielce_Herb.svg" alt="Korona Kielce" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Korona Kielce</span>
+  <div class="team-row">
+    <span class="col-pos">7</span>
+    <div class="col-team">
+      <img src="img/korona.png" alt="Korona">
+      <span>Korona Kielce</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">12:9</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">12</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">12:9</span>
+    <span class="col-pts">12</span>
   </div>
 
   <!-- 8. ZAGŁĘBIE LUBIN -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">8</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Zaglebie_Lubin_crest.svg" alt="Zagłębie Lubin" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Zagłębie Lubin</span>
+  <div class="team-row">
+    <span class="col-pos">8</span>
+    <div class="col-team">
+      <img src="img/zaglebie.png" alt="Zagłębie">
+      <span>Zagłębie Lubin</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">12:8</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">12</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">12:8</span>
+    <span class="col-pts">12</span>
   </div>
 
   <!-- 9. JAGIELLONIA BIAŁYSTOK -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">9</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Jagiellonia_Bia%C5%82ystok_logo.svg" alt="Jagiellonia Białystok" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Jagiellonia Białystok</span>
+  <div class="team-row">
+    <span class="col-pos">9</span>
+    <div class="col-team">
+      <img src="img/jagiellonia.png" alt="Jagiellonia">
+      <span>Jagiellonia Białystok</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">12:11</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">12</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">12:11</span>
+    <span class="col-pts">12</span>
   </div>
 
   <!-- 10. GKS KATOWICE -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">10</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/GKS_Katowice_logo.svg" alt="GKS Katowice" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">GKS Katowice</span>
+  <div class="team-row">
+    <span class="col-pos">10</span>
+    <div class="col-team">
+      <img src="img/gks.png" alt="GKS">
+      <span>GKS Katowice</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">9:13</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">9</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">9:13</span>
+    <span class="col-pts">9</span>
   </div>
 
   <!-- 11. WIDZEW ŁÓDŹ -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">11</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Widzew_%C5%81%C3%B3d%C5%BA_herb.svg" alt="Widzew Łódź" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Widzew Łódź</span>
+  <div class="team-row">
+    <span class="col-pos">11</span>
+    <div class="col-team">
+      <img src="img/widzew.png" alt="Widzew">
+      <span>Widzew Łódź</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">8:11</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">8</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">8:11</span>
+    <span class="col-pts">8</span>
   </div>
 
   <!-- 12. CRACOVIA -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">12</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Cracovia_logo.svg" alt="Cracovia" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Cracovia</span>
+  <div class="team-row">
+    <span class="col-pos">12</span>
+    <div class="col-team">
+      <img src="img/cracovia.png" alt="Cracovia">
+      <span>Cracovia</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">8:7</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">8</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">8:7</span>
+    <span class="col-pts">8</span>
   </div>
 
   <!-- 13. WISŁA PŁOCK -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">13</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Wis%C5%82a_P%C5%82ock_logo.svg" alt="Wisła Płock" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Wisła Płock</span>
+  <div class="team-row">
+    <span class="col-pos">13</span>
+    <div class="col-team">
+      <img src="img/wisla-plock.png" alt="Wisła Płock">
+      <span>Wisła Płock</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">8:7</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">8</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">8:7</span>
+    <span class="col-pts">8</span>
   </div>
 
   <!-- 14. RADOMIAK -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">14</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Radomiak_Radom_herb.svg" alt="Radomiak" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Radomiak</span>
+  <div class="team-row">
+    <span class="col-pos">14</span>
+    <div class="col-team">
+      <img src="img/radomiak.png" alt="Radomiak">
+      <span>Radomiak</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">8:6</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">8</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">8:6</span>
+    <span class="col-pts">8</span>
   </div>
 
   <!-- 15. ŚLĄSK WROCŁAW -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">15</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Slask_Wroclaw_logo.svg" alt="Śląsk Wrocław" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Śląsk Wrocław</span>
+  <div class="team-row">
+    <span class="col-pos">15</span>
+    <div class="col-team">
+      <img src="img/slask.png" alt="Śląsk">
+      <span>Śląsk Wrocław</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">6:10</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">6</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">6:10</span>
+    <span class="col-pts">6</span>
   </div>
 
   <!-- 16. MOTOR LUBLIN -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">16</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Motor_Lublin_logo.svg" alt="Motor Lublin" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Motor Lublin</span>
+  <div class="team-row">
+    <span class="col-pos">16</span>
+    <div class="col-team">
+      <img src="img/motor.png" alt="Motor">
+      <span>Motor Lublin</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">8</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">5:9</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">5</span>
+    <span class="col-m">8</span>
+    <span class="col-goals">5:9</span>
+    <span class="col-pts">5</span>
   </div>
 
   <!-- 17. WIECZYSTA -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">17</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/53/KS_Wieczysta_Krak%C3%B3w_logo.svg" alt="Wieczysta" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Wieczysta</span>
+  <div class="team-row">
+    <span class="col-pos">17</span>
+    <div class="col-team">
+      <img src="img/wieczysta.png" alt="Wieczysta">
+      <span>Wieczysta</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">4:9</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">4</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">4:9</span>
+    <span class="col-pts">4</span>
   </div>
 
   <!-- 18. RAKÓW CZĘSTOCHOWA -->
-  <div class="team-row" style="display: flex; align-items: center; justify-content: space-between; background: var(--glass); border: 1px solid var(--glass-border); padding: 10px 12px; border-radius: 8px; backdrop-filter: blur(8px); margin-bottom: 6px;">
-    <span style="width: 25px; font-weight: bold; color: var(--accent-gold);">18</span>
-    <div style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Rak%C3%B3w_Cz%C4%99stochowa_logo.svg" alt="Raków Częstochowa" style="width: 24px; height: 24px; object-fit: contain;">
-      <span style="color: #fff; font-weight: 500; font-size: 0.95rem;">Raków Częstochowa</span>
+  <div class="team-row">
+    <span class="col-pos">18</span>
+    <div class="col-team">
+      <img src="img/rakow.png" alt="Raków">
+      <span>Raków Częstochowa</span>
     </div>
-    <span style="width: 30px; text-align: center; color: #ccc; font-size: 0.9rem;">7</span>
-    <span style="width: 55px; text-align: center; color: #ccc; font-size: 0.85rem;">3:8</span>
-    <span style="width: 35px; text-align: right; font-weight: bold; color: var(--accent-orange); font-size: 1.1rem;">3</span>
+    <span class="col-m">7</span>
+    <span class="col-goals">3:8</span>
+    <span class="col-pts">3</span>
   </div>
+
+</div>
 
 </div>
     <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 TABELA: PREMIER LEAGUE -->

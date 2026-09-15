@@ -553,6 +553,27 @@
   color: #ffb347; /* Nasz bursztynowy kolor */
   box-shadow: 0 0 10px rgba(255, 179, 71, 0.2);
 }
+    /* SZKLANE SZAFECZKI DRUŻYN (TEAM ROW) */
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(25, 25, 30, 0.4); /* Półprzezroczyste ciemne szkło */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Delikatna ramka */
+  padding: 10px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 6px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+/* Magia Premium: Efekt po najechaniu / dotknięciu */
+.team-row:hover {
+  background: rgba(25, 25, 30, 0.7);
+  border-color: rgba(255, 179, 71, 0.6); /* Nasz bursztyn */
+  transform: translateX(4px); /* Szafeczka lekko wysuwa się w prawo */
+  box-shadow: -4px 0 10px rgba(255, 179, 71, 0.15);
+}
   </style>
 </head>
 
@@ -1034,6 +1055,33 @@
   </div>
 
 </div>
+    <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 TABELA: PREMIER LEAGUE -->
+  <div id="tabela-premier" class="table-wrapper" style="display: none;">
+    <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+      <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Premier League...
+    </div>
+  </div>
+
+  <!-- 🇪🇸 TABELA: LA LIGA -->
+  <div id="tabela-laliga" class="table-wrapper" style="display: none;">
+    <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+      <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli La Ligi...
+    </div>
+  </div>
+
+  <!-- 🇩🇪 TABELA: BUNDESLIGA -->
+  <div id="tabela-bundesliga" class="table-wrapper" style="display: none;">
+    <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+      <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Bundesligi...
+    </div>
+  </div>
+
+  <!-- 🇮🇹 TABELA: SERIE A -->
+  <div id="tabela-seriea" class="table-wrapper" style="display: none;">
+    <div style="text-align: center; color: var(--accent-gold); padding: 20px;">
+      <span class="fire-emoji">⏳</span> Trwa ładowanie tabeli Serie A...
+    </div>
+  </div>
 
 
  

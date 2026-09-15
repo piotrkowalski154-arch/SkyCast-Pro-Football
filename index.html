@@ -558,14 +558,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(25, 25, 30, 0.4); /* Półprzezroczyste ciemne szkło */
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Delikatna ramka */
+  background: rgba(25, 25, 30, 0.6); /* Przyciemniłem lekko szkło dla lepszej czytelności */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px 12px;
   border-radius: 8px;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Wymuszenie na przeglądarkach Chrome */
+  transform: translateZ(0); /* Złoty trick: wymusza użycie karty graficznej, usuwa glitche! */
   margin-bottom: 6px;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition: all 0.3s ease;
 }
+
 
 /* Magia Premium: Efekt po najechaniu / dotknięciu */
 .team-row:hover {

@@ -10,8 +10,20 @@
 
   <style>
     /* =========================================
-       1. USTAWIENIA GLOBALNE I PEWNE TŁO
-       ========================================= */
+   KOLORY STREF LIGOWYCH (AWANS / SPADEK)
+   ========================================= */
+
+/* 1. MIEJSCE (Lider / Liga Mistrzów) - Złoty */
+.zone-champions { border-left: 4px solid #ffd700 !important; }
+.zone-champions .col-pos { color: #ffd700; }
+
+/* 2-3. MIEJSCE (Europejskie Puchary) - Turkusowy/Niebieski */
+.zone-europe { border-left: 4px solid #00ccff !important; }
+.zone-europe .col-pos { color: #00ccff; }
+
+/* 16-18. MIEJSCE (Strefa Spadkowa) - Czerwony */
+.zone-relegation { border-left: 4px solid #ff4444 !important; }
+.zone-relegation .col-pos { color: #ff4444; }
     * { 
       box-sizing: border-box; 
       margin: 0; 
@@ -830,6 +842,7 @@
 
   <!-- 🇵🇱 TABELA: EKSTRAKLASA (PO 3 KOLEJKACH) -->
 <!-- GŁÓWNY KONTENER EKSTRAKLASY -->
+<!-- GŁÓWNY KONTENER EKSTRAKLASY -->
 <div id="tabela-ekstraklasa" class="table-wrapper">
   
   <!-- BURSZTYNOWY NAGŁÓWEK TABELI -->
@@ -841,11 +854,11 @@
     <span class="col-pts">PKT</span>
   </div>
 
-  <!-- 1. GÓRNIK ZABRZE -->
-  <div class="team-row">
+  <!-- 1. GÓRNIK ZABRZE (Strefa: LIDER / ZŁOTY) -->
+  <div class="team-row zone-champions">
     <span class="col-pos">1</span>
     <div class="col-team">
-      <img src="img/gornik.png" alt="Górnik">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/G%C3%B3rnik_Zabrze_logo.svg" alt="Górnik">
       <span>Górnik Zabrze</span>
     </div>
     <span class="col-m">7</span>
@@ -853,11 +866,11 @@
     <span class="col-pts">18</span>
   </div>
 
-  <!-- 2. LEGIA WARSZAWA -->
-  <div class="team-row">
+  <!-- 2. LEGIA WARSZAWA (Strefa: EUROPA / NIEBIESKI) -->
+  <div class="team-row zone-europe">
     <span class="col-pos">2</span>
     <div class="col-team">
-      <img src="img/legia.png" alt="Legia">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Legia_Warszawa_logo.svg" alt="Legia">
       <span>Legia Warszawa</span>
     </div>
     <span class="col-m">8</span>
@@ -865,11 +878,11 @@
     <span class="col-pts">16</span>
   </div>
 
-  <!-- 3. LECH POZNAŃ -->
-  <div class="team-row">
+  <!-- 3. LECH POZNAŃ (Strefa: EUROPA / NIEBIESKI) -->
+  <div class="team-row zone-europe">
     <span class="col-pos">3</span>
     <div class="col-team">
-      <img src="img/lech.png" alt="Lech">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/KKS_Lech_Pozna%C5%84_logo.svg" alt="Lech">
       <span>Lech Poznań</span>
     </div>
     <span class="col-m">7</span>
@@ -877,11 +890,11 @@
     <span class="col-pts">16</span>
   </div>
 
-  <!-- 4. WISŁA KRAKÓW -->
+  <!-- 4. WISŁA KRAKÓW (Zwykła strefa) -->
   <div class="team-row">
     <span class="col-pos">4</span>
     <div class="col-team">
-      <img src="img/wisla.png" alt="Wisła">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Wisla_Krakow_logo.svg" alt="Wisła">
       <span>Wisła Kraków</span>
     </div>
     <span class="col-m">8</span>
@@ -893,7 +906,7 @@
   <div class="team-row">
     <span class="col-pos">5</span>
     <div class="col-team">
-      <img src="img/piast.png" alt="Piast">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Piast_Gliwice_logo.svg" alt="Piast">
       <span>Piast Gliwice</span>
     </div>
     <span class="col-m">8</span>
@@ -905,7 +918,7 @@
   <div class="team-row">
     <span class="col-pos">6</span>
     <div class="col-team">
-      <img src="img/pogon.png" alt="Pogoń">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Pogon_Szczecin_logo.svg" alt="Pogoń">
       <span>Pogoń Szczecin</span>
     </div>
     <span class="col-m">7</span>
@@ -917,7 +930,7 @@
   <div class="team-row">
     <span class="col-pos">7</span>
     <div class="col-team">
-      <img src="img/korona.png" alt="Korona">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Korona_Kielce_Herb.svg" alt="Korona">
       <span>Korona Kielce</span>
     </div>
     <span class="col-m">7</span>
@@ -929,7 +942,7 @@
   <div class="team-row">
     <span class="col-pos">8</span>
     <div class="col-team">
-      <img src="img/zaglebie.png" alt="Zagłębie">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Zaglebie_Lubin_crest.svg" alt="Zagłębie">
       <span>Zagłębie Lubin</span>
     </div>
     <span class="col-m">7</span>
@@ -941,7 +954,7 @@
   <div class="team-row">
     <span class="col-pos">9</span>
     <div class="col-team">
-      <img src="img/jagiellonia.png" alt="Jagiellonia">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Jagiellonia_Bia%C5%82ystok_logo.svg" alt="Jagiellonia">
       <span>Jagiellonia Białystok</span>
     </div>
     <span class="col-m">7</span>
@@ -953,7 +966,7 @@
   <div class="team-row">
     <span class="col-pos">10</span>
     <div class="col-team">
-      <img src="img/gks.png" alt="GKS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/GKS_Katowice_logo.svg" alt="GKS">
       <span>GKS Katowice</span>
     </div>
     <span class="col-m">7</span>
@@ -965,7 +978,7 @@
   <div class="team-row">
     <span class="col-pos">11</span>
     <div class="col-team">
-      <img src="img/widzew.png" alt="Widzew">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Widzew_%C5%81%C3%B3d%C5%BA_herb.svg" alt="Widzew">
       <span>Widzew Łódź</span>
     </div>
     <span class="col-m">8</span>
@@ -977,7 +990,7 @@
   <div class="team-row">
     <span class="col-pos">12</span>
     <div class="col-team">
-      <img src="img/cracovia.png" alt="Cracovia">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Cracovia_logo.svg" alt="Cracovia">
       <span>Cracovia</span>
     </div>
     <span class="col-m">8</span>
@@ -989,7 +1002,7 @@
   <div class="team-row">
     <span class="col-pos">13</span>
     <div class="col-team">
-      <img src="img/wisla-plock.png" alt="Wisła Płock">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Wis%C5%82a_P%C5%82ock_logo.svg" alt="Wisła Płock">
       <span>Wisła Płock</span>
     </div>
     <span class="col-m">7</span>
@@ -1001,7 +1014,7 @@
   <div class="team-row">
     <span class="col-pos">14</span>
     <div class="col-team">
-      <img src="img/radomiak.png" alt="Radomiak">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Radomiak_Radom_herb.svg" alt="Radomiak">
       <span>Radomiak</span>
     </div>
     <span class="col-m">8</span>
@@ -1013,7 +1026,7 @@
   <div class="team-row">
     <span class="col-pos">15</span>
     <div class="col-team">
-      <img src="img/slask.png" alt="Śląsk">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Slask_Wroclaw_logo.svg" alt="Śląsk">
       <span>Śląsk Wrocław</span>
     </div>
     <span class="col-m">8</span>
@@ -1021,11 +1034,11 @@
     <span class="col-pts">6</span>
   </div>
 
-  <!-- 16. MOTOR LUBLIN -->
-  <div class="team-row">
+  <!-- 16. MOTOR LUBLIN (Strefa: SPADEK / CZERWONY) -->
+  <div class="team-row zone-relegation">
     <span class="col-pos">16</span>
     <div class="col-team">
-      <img src="img/motor.png" alt="Motor">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Motor_Lublin_logo.svg" alt="Motor">
       <span>Motor Lublin</span>
     </div>
     <span class="col-m">8</span>
@@ -1033,11 +1046,11 @@
     <span class="col-pts">5</span>
   </div>
 
-  <!-- 17. WIECZYSTA -->
-  <div class="team-row">
+  <!-- 17. WIECZYSTA (Strefa: SPADEK / CZERWONY) -->
+  <div class="team-row zone-relegation">
     <span class="col-pos">17</span>
     <div class="col-team">
-      <img src="img/wieczysta.png" alt="Wieczysta">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/53/KS_Wieczysta_Krak%C3%B3w_logo.svg" alt="Wieczysta">
       <span>Wieczysta</span>
     </div>
     <span class="col-m">7</span>
@@ -1045,11 +1058,11 @@
     <span class="col-pts">4</span>
   </div>
 
-  <!-- 18. RAKÓW CZĘSTOCHOWA -->
-  <div class="team-row">
+  <!-- 18. RAKÓW CZĘSTOCHOWA (Strefa: SPADEK / CZERWONY) -->
+  <div class="team-row zone-relegation">
     <span class="col-pos">18</span>
     <div class="col-team">
-      <img src="img/rakow.png" alt="Raków">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Rak%C3%B3w_Cz%C4%99stochowa_logo.svg" alt="Raków">
       <span>Raków Częstochowa</span>
     </div>
     <span class="col-m">7</span>
@@ -1059,7 +1072,7 @@
 
 </div>
 
-</div>
+
     <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 TABELA: PREMIER LEAGUE -->
   <div id="tabela-premier" class="table-wrapper" style="display: none;">
     <div style="text-align: center; color: var(--accent-gold); padding: 20px;">

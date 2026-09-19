@@ -2022,97 +2022,68 @@
 
     const form = document.getElementById('typer-form');
     const rankingList = document.getElementById('ranking-list');
-// =========================================
-    // WYSYŁANIE GŁOSÓW (Pełna Automatyzacja 🚀)
-    // =========================================
+// ==========================================
+    // 1. WYSYŁANIE TYPÓW (NOWY SILNIK 1-X-2)
+    // ==========================================
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
       const nick = document.getElementById('user-nick').value.trim();
-      if (!nick) return alert('Wpisz swój Nick!');
+      if (!nick) return alert('Wpisz swój Nick, bracie!');
 
-      // Tworzymy puste pudełko na typy i łapiemy wszystkie zaznaczone kropki z całego formularza
-      const wybraneTypy = {};
-      const zaznaczoneKropki = document.querySelectorAll('#typer-form input[type="radio"]:checked');
-      
-      zaznaczoneKropki.forEach(radio => {
-        // Usuwamy "faworyt_" z nazwy i pakujemy do pudełka (np. bundesliga: "Bayern")
-        const nazwaLigi = radio.name.replace('faworyt_', '');
-        wybraneTypy[nazwaLigi] = radio.value;
+      // Zbieramy wszystkie zaznaczone typy (1-X-2) za pomocą selektora
+      const zaznaczoneTypy = document.querySelectorAll('.bet-radio-btn input[type="radio"]:checked');
+      const typyUzytkownika = {};
+
+      // Pętla forEach wrzuca każdy zaznaczony typ do naszego "worka"
+      zaznaczoneTypy.forEach((radio) => {
+        typyUzytkownika[radio.name] = radio.value; // np. zapisze "ekstra_m1": "1"
       });
 
-      // Sprawdzamy, czy gracz wybrał chociaż jedną drużynę
-      if (Object.keys(wybraneTypy).length === 0) {
-        return alert('Musisz wytypować przynajmniej jednego faworyta, bracie!');
+      // Zabezpieczenie: Sprawdzamy czy użytkownik obstawił jakikolwiek mecz
+      if (Object.keys(typyUzytkownika).length === 0) {
+        return alert('Zaznacz wynik chociaż jednego meczu!');
       }
 
-      // Pakujemy dane do wysyłki
       const voteData = {
         nick: nick,
-        faworyci: wybraneTypy,
+        typy: typyUzytkownika,
         timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'})
       };
 
-      // Wysyłamy do Firebase
       push(ref(db, 'votes'), voteData)
         .then(() => {
-          alert('Ogień! Twoje typy zostały zapisane w chmurze Firebase! 🚀');
-          form.reset();
+          alert('Ogień! Twoje typy wjechały do bazy! 🚀');
+          form.reset(); // Czyści kupon po wysłaniu
         })
         .catch((err) => alert('Błąd zapisu: ' + err.message));
     });
 
-    // =========================================
-    // ODBIERANIE GŁOSÓW I PASKI POSTĘPU
-    // =========================================
+    // ==========================================
+    // 2. ODBIERANIE GŁOSÓW I RANKING TYPERÓW
+    // ==========================================
     const votesRef = ref(db, 'votes');
     onValue(votesRef, (snapshot) => {
       const data = snapshot.val();
       if (!data) {
-        rankingList.innerHTML = '<tr><td colspan="4" style="text-align: center;">Brak oddanych głosów. Bądź pierwszy!</td></tr>';
+        rankingList.innerHTML = '<tr><td colspan="4" style="text-align: center;">Brak oddanych głosów. Przetrzyj szlak!</td></tr>';
         return;
       }
 
       const voteEntries = Object.values(data);
-      const totalVotes = voteEntries.length; // Liczymy ile było w ogóle głosów
-      const teamCounts = {};
-
-      // 1. MECHANIZM PASKÓW (Twój kod zliczający głosy na konkretne kluby!)
-      voteEntries.forEach((entry) => {
-        if (entry.faworyci) {
-          Object.values(entry.faworyci).forEach((teamName) => {
-            if (teamName !== 'Brak') {
-              teamCounts[teamName] = (teamCounts[teamName] || 0) + 1;
-            }
-          });
-        }
-      });
-
-      // 2. AKTUALIZACJA PASKÓW W HTML
-      Object.keys(teamCounts).forEach((teamName) => {
-        const barElement = document.getElementById(`bar-${teamName}`);
-        if (barElement) {
-          const percentage = Math.round((teamCounts[teamName] / totalVotes) * 100);
-          barElement.style.width = `${percentage}%`;
-        }
-      });
-
-      // 3. BUDOWANIE TABELI OSTATNICH TYPERÓW
       rankingList.innerHTML = '';
+      
+      // Pokazujemy 5 ostatnich kuponów
       const recentVotes = voteEntries.slice(-5).reverse();
       
       recentVotes.forEach((entry, index) => {
-        let wytypowaneDruzyny = 'Brak typów';
-        if (entry.faworyci) {
-          // Kleimy w jeden ciąg, np.: Legia | Arsenal | Real
-          wytypowaneDruzyny = Object.values(entry.faworyci).join(' <span style="color:#a0aec0;">|</span> ');
-        }
-
+        // Liczymy, ile meczów obstawił dany gracz (ile kluczy jest w obiekcie 'typy')
+        const iloscObstawiowychMeczow = entry.typy ? Object.keys(entry.typy).length : 0;
+        
         const row = `
           <tr>
             <td>#${index + 1}</td>
-            <td style="color: #00d4ff;"><strong>${entry.nick}</strong></td>
-            <td style="font-weight: bold; color: #ffcc00;">${wytypowaneDruzyny}</td>
+            <td><strong>${entry.nick}</strong></td>
+            <td>Liczba typów: <strong>${iloscObstawiowychMeczow}</strong></td>
             <td><span class="accuracy-badge">${entry.timestamp}</span></td>
           </tr>
         `;

@@ -676,57 +676,52 @@
                <div class="fixtures-grid">
     
     <!-- ZAKTUALIZOWANA KARTA LIVE: DERBY MADRYTU -->
-    <div class="match-card glass-panel" data-match-id="laliga_m1" style="flex-direction: column; align-items: stretch; border-color: #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);">
+  <div class="match-card glass-panel" data-match-id="laliga_m1" style="flex-direction: column; align-items: stretch; border-color: #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);">
+    
+    <!-- GÓRA: WYNIK I ZESPOŁY -->
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         
-        <!-- GÓRA: WYNIK I ZESPOŁY -->
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            
-            <!-- Gospodarz (Atlético) -->
-            <div style="display: flex; align-items: center; gap: 10px; flex: 1;">
-                <img src="atletico-madryt.png" alt="Atlético" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain;">
-                <span style="font-weight: bold; color: #fff; font-size: 1.1em;">Atlético</span>
-            </div>
-
-            <!-- Środek: Wynik Live -->
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1;">
-                <span style="color: #ff2a2a; font-size: 0.75em; font-weight: bold; background: rgba(255, 42, 42, 0.15); border: 1px solid #ff2a2a; padding: 3px 10px; border-radius: 12px; margin-bottom: 5px; animation: pulse 2s infinite;">
-                    ● LIVE 90'
-                </span>
-                <span style="font-size: 2em; font-weight: 900; color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); letter-spacing: 4px;">
-                    2 - 1
-                </span>
-            </div>
-
-            <!-- Gość (Real) -->
-            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex: 1;">
-                <span style="font-weight: bold; color: #fff; font-size: 1.1em;">Real</span>
-                <img src="real-madryt.png" alt="Real Madryt" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain;">
-            </div>
-            
+        <!-- Gospodarz (Atlético) -->
+        <div style="display: flex; align-items: center; gap: 10px; flex: 1;">
+            <img src="atletico-madryt.png" alt="Atlético" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain;">
+            <span style="font-weight: bold; color: #fff; font-size: 1.1em;">Atlético</span>
         </div>
 
-        <!-- DÓŁ: ZDARZENIA MECZOWE (Zastępuje przyciski typera) -->
-        <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,0.15); font-size: 0.85em; color: #cbd5e1;">
-            
-            <!-- Zdarzenia Atlético -->
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-                <span style="display: flex; align-items: center; gap: 6px;">
-                    ⚽ Álex Grimaldo 53' (K)
-                </span>
-                <span style="display: flex; align-items: center; gap: 6px;">
-                    ⚽ Jonathan David 59'
-                </span>
-            </div>
-
-            <!-- Zdarzenia Realu -->
-            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
-                <span style="display: flex; align-items: center; gap: 6px; color: #ff6b6b;">
-                    🟥 Dean Huijsen 52'
-                </span>
-            </div>
-
+        <!-- Środek: Wynik i Status (Zakończony) -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1;">
+            <span style="color: #94a3b8; font-size: 0.75em; font-weight: bold; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); padding: 3px 10px; border-radius: 12px; margin-bottom: 5px;">
+                KONIEC MECZU
+            </span>
+            <span style="font-size: 2em; font-weight: 900; color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); letter-spacing: 4px; white-space: nowrap;">
+                2 - 1
+            </span>
         </div>
+
+        <!-- Gość (Real) -->
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex: 1;">
+            <span style="font-weight: bold; color: #fff; font-size: 1.1em;">Real</span>
+            <img src="real-madryt.png" alt="Real Madryt" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain;">
+        </div>
+        
     </div>
+
+    <!-- DÓŁ: ZDARZENIA MECZOWE -->
+    <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,0.15); font-size: 0.82em; color: #cbd5e1; line-height: 1.5;">
+        
+        <!-- Zdarzenia Atlético -->
+        <div style="display: flex; flex-direction: column; gap: 4px; text-align: left;">
+            <span>⚽ Álex Grimaldo 53' (K)</span>
+            <span>⚽ Jonathan David 59'</span>
+        </div>
+
+        <!-- Zdarzenia Realu -->
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px; text-align: right;">
+            <span>⚽ Antonio Rüdiger 89'</span>
+            <span style="color: #ff6b6b;">🟥 Dean Huijsen 52'</span>
+        </div>
+
+    </div>
+
 </div>
             
             <!-- 🇩🇪 BUNDESLIGA -->

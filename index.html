@@ -694,8 +694,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE -->
+<!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE -->
             <div class="league-box">
                 <div class="league-header-title">
                     <img src="premier-league-logo.png" alt="Premier League" class="league-mini-logo">
@@ -715,45 +714,55 @@
                 </div>
             </div>
 
-            <!-- STREFA PODPISU I WYSYŁKI -->
-            <div class="section-title"> 
-                <input type="text" id="user-nick" class="typer-input" placeholder="Wpisz swój Nick (np. Piotrek_Krakow)" required>
-                <button type="submit" class="typer-btn">ZAPISZ TYPY I DOŁĄCZ DO RANKINGU 🚀</button>
+            <!-- ================= STREFA PODPISU, OPINII I WYSYŁKI (W TYM SAMYM FORMULARZU) ================= -->
+            <div class="section-title" style="margin-top: 30px;">
+              <span class="fire-emoji">🎯</span> CENTRUM TYPERA & GŁOS SPOŁECZNOŚCI <span class="fire-emoji">💡</span>
+            </div>
+            <p class="section-desc">
+              ⚡ Wytypuj najgorętsze hity kolejki, dorzuć swój autorski pomysł na rozwój SkyCast Pro Football i zgarnij respekt w rankingu! 🚀
+            </p>
+
+            <div class="typer-action-box glass-panel" style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+              <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <!-- Pole na Nick -->
+                <input type="text" id="user-nick" class="typer-input" placeholder="👤 Twój Nick (np. Mistrz_Kuponu)" required style="flex: 1; min-width: 220px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #fff;">
+                
+                <!-- Pole na pomysł -->
+                <input type="text" id="app-suggestion" class="typer-input" placeholder="💡 Co byś dodał do SkyCast Pro Football?" style="flex: 2; min-width: 280px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #fff;">
+              </div>
+
+              <!-- Przycisk wysyłki -->
+              <button type="submit" id="typer-submit-btn" class="typer-btn" style="width: 100%; padding: 14px; border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #0055ff); color: #fff; font-weight: bold; border: none; cursor: pointer; text-shadow: 0 0 10px rgba(0,212,255,0.6); transition: 0.3s;">
+                ZAPISZ I WYŚLIJ SWÓJ POMYSŁ DO SPOŁECZNOŚCI 🚀
+              </button>
             </div>
             
         </form>
-  <section class="window video-section" style="margin-top: 30px;">
-      
-  <!-- NAGŁÓWEK STREFY TYPERA -->
-  <div class="section-title">
-    <span class="fire-emoji">🎯</span> CENTRUM TYPERA & GŁOS SPOŁECZNOŚCI <span class="fire-emoji">💡</span>
-  </div>
-  <p class="section-desc">
-    ⚡ Wytypuj najgorętsze hity kolejki, dorzuć swój autorski pomysł na rozwój SkyCast Pro Football i zgarnij respekt w rankingu! 🚀
-  </p>
+        <!-- KONIEC GŁÓWNEGO FORMULARZA (ZNACZNIK </form> MUSI BYĆ DOPIERO TUTAJ) -->
 
-  <form id="typer-form">
-    <!-- Tutaj znajdują się Twoje karty meczowe z radio buttonami... -->
-    
-    <!-- STREFA PODPISU, OPINII I WYSYŁKI -->
-    <div class="typer-action-box glass-panel" style="padding: 20px; margin-top: 25px; display: flex; flex-direction: column; gap: 15px;">
-              
-      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-        <!-- Pole na Nick -->
-        <input type="text" id="user-nick" class="typer-input" placeholder="👤 Twój Nick (np. Mistrz_Kuponu)" required style="flex: 1; min-width: 220px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #fff;">
-        
-        <!-- Pole na pomysł -->
-        <input type="text" id="app-suggestion" class="typer-input" placeholder="💡 Co byś dodał do SkyCast Pro Football?" style="flex: 2; min-width: 280px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #fff;">
+    <!-- ================= TABELA RANKINGOWA (TUTAJ WPADAJĄ DANE Z BAZY) ================= -->
+    <section class="window glass-panel" style="margin-top: 35px; padding: 25px; border-radius: 16px; background: rgba(18, 26, 43, 0.8); border: 1px solid rgba(0, 212, 255, 0.3);">
+      <h3 style="color: #ffcc00; font-size: 1.2em; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+        🏆 OSTATNIO ODDANE GŁOSY
+      </h3>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9em;">
+          <thead>
+            <tr style="color: #a0aec0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+              <th style="padding: 10px;">#</th>
+              <th style="padding: 10px;">Gracz / Propozycja</th>
+              <th style="padding: 10px;">Statystyki</th>
+              <th style="padding: 10px;">Czas</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-list">
+            <!-- Tutaj JavaScript wklei wiersze <tr> z Firebase -->
+          </tbody>
+        </table>
       </div>
-
-      <!-- Przycisk wysyłki -->
-      <button type="submit" id="typer-submit-btn" class="typer-btn" style="width: 100%; padding: 14px; border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #0055ff); color: #fff; font-weight: bold; border: none; cursor: pointer; text-shadow: 0 0 10px rgba(0,212,255,0.6); transition: 0.3s;">
-        ZAPISZ  I WYŚLIJ SWÓJ POMYSŁ DO SPOŁECZNOŚCI 🚀
-      </button>
-
-    </div>
-  </form>
-</section>
+    </section>
+    
+          
 
     <!-- ================= OSOBNE OKNO: ROZKŁAD GŁOSÓW LIVE (START 15:00) ================= -->
 <section class="window glass-panel" style="margin-top: 35px; padding: 25px; border-radius: 16px; background: rgba(18, 26, 43, 0.8); border: 1px solid rgba(0, 212, 255, 0.3); box-shadow: 0 12px 35px rgba(0,0,0,0.6);">

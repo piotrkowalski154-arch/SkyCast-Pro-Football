@@ -2430,85 +2430,102 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    const form = document.getElementById('typer-form');
-    const rankingList = document.getElementById('ranking-list');
+   // POBRANIE ELEMENTÓW
+const form = document.getElementById('typer-form');
+const rankingList = document.getElementById('ranking-list');
+
 // ==========================================
-    // 1. WYSYŁANIE TYPÓW (NOWY SILNIK 1-X-2)
-    // ==========================================
+// 1. WYSYŁANIE TYPÓW (NOWY SILNIK 1-X-2)
+// ==========================================
+if (form) {
   form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nick = document.getElementById('user-nick').value.trim();
-      if (!nick) return alert('Wpisz swój Nick, bracie!');
+    e.preventDefault();
 
-      // Pobieramy wpisany pomysł z nowego pola
-      const suggestion = document.getElementById('app-suggestion').value.trim();
+    const nick = document.getElementById('user-nick').value.trim();
+    if (!nick) return alert('Wpisz swój Nick, bracie!');
 
-      // Zbieramy wszystkie zaznaczone typy (1-X-2) za pomocą selektora
-      const zaznaczoneTypy = document.querySelectorAll('.bet-radio-btn input[type="radio"]:checked');
-      const typyUzytkownika = {};
+    const suggestionInput = document.getElementById('app-suggestion');
+    const suggestion = suggestionInput ? suggestionInput.value.trim() : '';
 
-      // Pętla forEach wrzuca każdy zaznaczony typ do naszego "worka"
-      zaznaczoneTypy.forEach((radio) => {
-        typyUzytkownika[radio.name] = radio.value; // np. zapisze "ekstra_m1": "1"
-      });
+    // Zbieramy zaznaczone typy szukając TYLKO wewnątrz formularza (bezpieczniejsze)
+    const zaznaczoneTypy = form.querySelectorAll('input[type="radio"]:checked');
+    const typyUzytkownika = {};
 
-      // Zabezpieczenie: Sprawdzamy czy użytkownik obstawił jakikolwiek mecz
-      if (Object.keys(typyUzytkownika).length === 0) {
-        return alert('Zaznacz wynik chociaż jednego meczu!');
-      }
-
-      const voteData = {
-        nick: nick,
-        suggestion: suggestion, // <--- Tutaj wpada pomysł do bazy!
-        typy: typyUzytkownika,
-        timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'})
-      };
-
-      push(ref(db, 'votes'), voteData)
-        .then(() => {
-          alert('Ogień! Twoje typy i pomysł wjechały do bazy! 🚀');
-          form.reset(); // Czyści kupon i formularz po wysłaniu
-        })
-        .catch((err) => alert('Błąd zapisu: ' + err.message));
+    zaznaczoneTypy.forEach((radio) => {
+      typyUzytkownika[radio.name] = radio.value;
     });
 
-    // ==========================================
-    // 2. ODBIERANIE GŁOSÓW I RANKING TYPERÓW
-    // ==========================================
-    const votesRef = ref(db, 'votes');
-    onValue(votesRef, (snapshot) => {
-      const data = snapshot.val();
-      if (!data) {
-        rankingList.innerHTML = '<tr><td colspan="4" style="text-align: center;">Brak oddanych głosów. Przetrzyj szlak!</td></tr>';
-        return;
-      }
+    if (Object.keys(typyUzytkownika).length === 0) {
+      return alert('Zaznacz wynik chociaż jednego meczu!');
+    }
 
-      const voteEntries = Object.values(data);
-      rankingList.innerHTML = '';
-      
-      // Pokazujemy 5 ostatnich kuponów
-      const recentVotes = voteEntries.slice(-5).reverse();
-      
-      recentVotes.forEach((entry, index) => {
-        // Liczymy, ile meczów obstawił dany gracz (ile kluczy jest w obiekcie 'typy')
-        const iloscObstawiowychMeczow = entry.typy ? Object.keys(entry.typy).length : 0;
-        
-        // Jeśli użytkownik wpisał pomysł, doklejamy go elegancko pod nickiem
-        const suggestionHtml = entry.suggestion 
-          ? `<br><span style="color: #00d4ff; font-size: 0.85em;">💡 "${entry.suggestion}"</span>` 
-          : '';
-        
-        const row = `
-          <tr>
-            <td>#${index + 1}</td>
-            <td><strong>${entry.nick}</strong>${suggestionHtml}</td>
-            <td>Liczba typów: <strong>${iloscObstawiowychMeczow}</strong></td>
-            <td><span class="accuracy-badge">${entry.timestamp}</span></td>
-          </tr>
-        `;
-        rankingList.innerHTML += row;
+    const voteData = {
+      nick: nick,
+      suggestion: suggestion,
+      typy: typyUzytkownika,
+      timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'}),
+      createdAt: Date.now() // Czas w milisekundach (przydatne do sortowania w przyszłości)
+    };
+
+    // Zablokowanie przycisku na czas wysyłania (zapobiega spamowi)
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    push(ref(db, 'votes'), voteData)
+      .then(() => {
+        alert('Ogień! Twoje typy i pomysł wjechały do bazy! 🚀');
+        form.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert('Błąd zapisu: ' + err.message);
+      })
+      .finally(() => {
+        // Odblokowanie przycisku po wszystkim
+        if (submitBtn) submitBtn.disabled = false;
       });
+  });
+}
+
+// ==========================================
+// 2. ODBIERANIE GŁOSÓW I RANKING TYPERÓW
+// ==========================================
+if (rankingList) {
+  const votesRef = ref(db, 'votes');
+  
+  onValue(votesRef, (snapshot) => {
+    const data = snapshot.val();
+    
+    if (!data) {
+      rankingList.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 15px; color: #94a3b8;">Brak oddanych głosów. Przetrzyj szlak!</td></tr>';
+      return;
+    }
+
+    const voteEntries = Object.values(data);
+    rankingList.innerHTML = '';
+    
+    // Pokazujemy 5 ostatnich kuponów
+    const recentVotes = voteEntries.slice(-5).reverse();
+    
+    recentVotes.forEach((entry, index) => {
+      const iloscObstawiowychMeczow = entry.typy ? Object.keys(entry.typy).length : 0;
+      
+      const suggestionHtml = entry.suggestion 
+        ? `<br><span style="color: #00d4ff; font-size: 0.85em;">💡 "${entry.suggestion}"</span>` 
+        : '';
+      
+      const row = `
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <td style="padding: 10px;">#${index + 1}</td>
+          <td style="padding: 10px;"><strong>${entry.nick}</strong>${suggestionHtml}</td>
+          <td style="padding: 10px;">Liczba typów: <strong>${iloscObstawiowychMeczow}</strong></td>
+          <td style="padding: 10px;"><span class="accuracy-badge">${entry.timestamp || ''}</span></td>
+        </tr>
+      `;
+      rankingList.innerHTML += row;
     });
+  });
+}
      
 
     // RADAR WIADOMOŚCI - ORYGINALNY Z PROMISE.ALL

@@ -513,25 +513,29 @@ body.app-exit {
 
     
     <!-- NAGŁÓWEK -->
-    <header class="window header">
-      <div class="header-badges">
-          <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="header-badge-img">
-          <img src="premier-league-logo.png" alt="Premier League" class="header-badge-img">
-          <img src="la-liga-logo.png" alt="La Liga" class="header-badge-img">
-          <img src="bundesliga-logo.png" alt="Bundesliga" class="header-badge-img">
-          <img src="serie-a-logo.png" alt="Serie A" class="header-badge-img">
-
-          <nav class="floating-app-bar;"style="margin-top: 10px; margin-bottom: 10px;">
-  <a href="sky-cast-pro-2.vercel.app" class="app-switch-btn exit-link">
-    <span class="switch-icon">🌤️</span>
-    <span class="switch-text">Pogoda & Radar</span>
-  </a>
-  <div class="app-switch-btn active">
-    <span class="switch-icon">⚽</span>
-    <span class="switch-text">Strefa Piłki</span>
+   <header class="window header">
+  <!-- 1. HERBY LIG (NA SAMEJ GÓRZE) -->
+  <div class="header-badges">
+    <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="header-badge-img">
+    <img src="premier-league-logo.png" alt="Premier League" class="header-badge-img">
+    <img src="la-liga-logo.png" alt="La Liga" class="header-badge-img">
+    <img src="bundesliga-logo.png" alt="Bundesliga" class="header-badge-img">
+    <img src="serie-a-logo.png" alt="Serie A" class="header-badge-img">
   </div>
-</nav>
-      </div>
+
+  <!-- 2. PRZEŁĄCZNIK SYSTEMOWY (IDEALNIE POMIĘDZY HERBAMI A TYTUŁEM) -->
+  <nav class="floating-app-bar" style="position: relative; bottom: auto; left: auto; transform: none; margin: 16px auto 12px auto; width: fit-content; display: flex;">
+    <a href="https://sky-cast-pro-2.vercel.app" class="app-switch-btn exit-link">
+      <span class="switch-icon">🌤️</span>
+      <span class="switch-text">Pogoda & Radar</span>
+    </a>
+    <div class="app-switch-btn active">
+      <span class="switch-icon">⚽</span>
+      <span class="switch-text">Strefa Piłki</span>
+    </div>
+  </nav>
+
+  <!-- 3. TUTAJ W TWOIM KODZIE JEST TYTUŁ (np. <h1>SKYCAST PRO FOOTBALL</h1> I CZERWONY PASEK) -->
 
 
 
@@ -539,15 +543,13 @@ body.app-exit {
 
 
 
-
-
+   
 
       
       <div class="football-title" ><span class="blue-gradient">SKYCAST PRO</span> <span class="gold-gradient">FOOTBALL</span></div>
       <div class="live-status"><div class="pulse-dot"></div> CENTRUM ANALIZ I SKRÓTÓW LIVE</div>
     </header>
 
-    <!-- ================= STREFA TYPERA & GŁOS SPOŁECZNOŚCI ================= -->
         <!-- ================= STREFA TYPERA & GŁOS SPOŁECZNOŚCI ================= -->
     <section class="window glass-panel typer-section" style="margin-top: 35px; padding: 25px; border-radius: 16px; background: rgba(16, 24, 40, 0.85); border: 1px solid rgba(0, 212, 255, 0.7);">
       <div class="section-title">

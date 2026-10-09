@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+dr mi<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -547,7 +547,21 @@ body.app-exit {
 }
 
 
-
+    /* =========================================
+       AKTUALIZACJA 1: NEONOWY BLASK WYBRANEGO TYPU
+       ========================================= */
+    .bet-radio-btn:has(input[type="radio"]:checked) {
+      background: rgba(0, 234, 144, 0.25) !important;
+      border-color: #00ea90 !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 15px rgba(0, 234, 144, 0.4), inset 0 0 10px rgba(0, 234, 144, 0.2) !important;
+      transform: scale(1.05); /* Lekko powiększa wybrany typ */
+    }
+    
+    .bet-radio-btn:has(input[type="radio"]:checked) input[type="radio"] {
+      accent-color: #00ea90 !important;
+    }
+    
 
 
 
@@ -1292,15 +1306,7 @@ body.app-exit {
             </span>
           </div>
 
-          <div class="iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-            <iframe 
-              src="https://www.youtube.com/embed/vx9kNxglEXU" 
-              title="Aż 39 GOLI! | TOP MOMENTY 9. kolejki PKO BP Ekstraklasy" 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
+        
 
           <div class="video-match-title" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 14px;">
             <span style="font-weight: 800; font-size: 1.05em; color: #fff; letter-spacing: 0.5px; text-transform: uppercase;">
@@ -1311,6 +1317,20 @@ body.app-exit {
             </span>
           </div>
         </div>
+
+<div class="iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+  <iframe 
+    src="https://www.youtube.com/embed/RukTIc01kl4" 
+    title="Wieczysta Kraków - Wisła Płock | SKRÓT | Ekstraklasa 2026/27" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+        
+
+
+        
         
         <!-- KARTA 1: Wisła Kraków - Śląsk Wrocław -->
         <div class="video-card glass-panel">
@@ -1326,19 +1346,8 @@ body.app-exit {
           </div>
         </div>
 
-        <!-- KARTA 2: GKS Katowice - Cracovia -->
-        <div class="video-card glass-panel">
-          <div class="video-header">
-            <img src="https://assets.football-logos.cc/logos/poland/512x512/ekstraklasa.4bd2cb11.png" alt="Ekstraklasa" class="video-league-logo">
-            <span class="video-league-name extra-neon">PKO BP EKSTRAKLASA</span>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/wEGUKxtwEr8" title="Skrót meczu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-match-title">
-            <img src="https://assets.football-logos.cc/logos/poland/512x512/katowice.bc649b50.png" class="tiny-logo" onerror="this.style.display='none'"> GKS Katowice vs Cracovia <img src="cracovia.png" class="tiny-logo">
-          </div>
-        </div>
+        
+        
 
         <!-- KARTA 3: Jagiellonia vs Legia -->
         <div class="video-card glass-panel">

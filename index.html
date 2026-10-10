@@ -606,27 +606,31 @@ body.app-exit {
       <div class="live-status"><div class="pulse-dot"></div> CENTRUM ANALIZ I SKRÓTÓW LIVE</div>
     </header>
 
-    <!-- ================= STREFA TYPERA & GŁOS SPOŁECZNOŚCI ================= -->
-        <!-- ================= STREFA TYPERA & GŁOS SPOŁECZNOŚCI ================= -->
+   
+<!-- ================= STREFA TYPERA & GŁOS SPOŁECZNOŚCI ================= -->
     <section class="window glass-panel typer-section" style="margin-top: 35px; padding: 25px; border-radius: 16px; background: rgba(16, 24, 40, 0.85); border: 1px solid rgba(0, 212, 255, 0.7);">
       <div class="section-title">
         <span class="fire-emoji">🎯</span> CENTRUM TYPERA & GŁOS SPOŁECZNOŚCI <span class="fire-emoji">💡</span>
       </div>
-      <p class="section - title" style="margin-top: 17px; color:#ffcc00; font-size: 1.1rem;">
-        ⚡ Wytypuj najgorętsze hity kolejki, dorzuć swój autorski pomysł na rozwój SkyCast Pro Football i zgarnij respekt w rankingu! 🚀
+      <p class="section-desc" style="margin-top: 17px; color:#ffcc00; font-size: 1.1rem;">
+        ⚡ Wytypuj niedzielne hity (11 października), dorzuć swój autorski pomysł na rozwój SkyCast Pro Football i zgarnij respekt w rankingu! 🚀
       </p>
 
       <form id="typer-form">
     
-        <div class="league-box">
-          <div class="league-header-title">
-            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo" style="margin-top: 30px;">
-            <span>PKO BP EKSTRAKLASA (PIĄTEK, 9 PAŹDZIERNIKA)</span>
+        <!-- 🇵🇱 PKO BP EKSTRAKLASA (NIEDZIELA, 11 PAŹDZIERNIKA) -->
+        <div class="league-box" style="margin-top: 20px; padding: 15px; background: rgba(10, 15, 25, 0.6); border: 2px solid #00d4ff; border-radius: 16px; box-shadow: 0 0 25px rgba(0, 212, 255, 0.35), inset 0 0 15px rgba(0, 212, 255, 0.2); backdrop-filter: blur(12px);">
+          
+          <div class="league-header-title" style="border-bottom: 2px solid rgba(0, 212, 255, 0.8); padding-bottom: 12px; margin-bottom: 15px; box-shadow: 0 15px 20px -15px rgba(0, 212, 255, 0.7);">
+            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo" onerror="this.src='https://assets.football-logos.cc/logos/poland/512x512/ekstraklasa.4bd2cb11.png'">
+            <span style="color: #ffffff; text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.5); letter-spacing: 1px; font-weight: 800;">PKO BP EKSTRAKLASA (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
           </div>
+
           <div class="fixtures-grid">
+            <!-- MECZ 1: Piast Gliwice - Widzew Łódź -->
             <div class="match-card glass-panel" data-match-id="ekstra_m1">
               <div class="match-info">
-                18:00 | <img src="wieczysta-krakow.png" alt="Wieczysta" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Wieczysta - Wisła Płock <img src="https://assets.football-logos.cc/logos/poland/512x512/wisla-plock.d49d6451.png" alt="Wisła Płock" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                14:45 | <img src="https://assets.football-logos.cc/logos/poland/512x512/piast.4e73f463.png" alt="Piast" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Piast Gliwice - Widzew Łódź <img src="https://assets.football-logos.cc/logos/poland/512x512/widzew.bb039ad9.png" alt="Widzew" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m1" value="1"> 1</label>
@@ -634,9 +638,11 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m1" value="2"> 2</label>
               </div>
             </div>
+
+            <!-- MECZ 2: Pogoń Szczecin - Korona Kielce -->
             <div class="match-card glass-panel" data-match-id="ekstra_m2">
               <div class="match-info">
-                20:30 | <img src="rakow-czestochowa.png" alt="Raków" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Raków - GKS Katowice <img src="gks-katowice.png" alt="GKS" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                17:30 | <img src="https://assets.football-logos.cc/logos/poland/512x512/pogon.b46303ff.png" alt="Pogoń" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Pogoń Szczecin - Korona Kielce <img src="https://assets.football-logos.cc/logos/poland/512x512/korona-kielce.d1bd43b7.png" alt="Korona" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m2" value="1"> 1</label>
@@ -644,70 +650,14 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m2" value="2"> 2</label>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- 🇵🇱 PKO BP EKSTRAKLASA (SOBOTA) -->
-        <div class="league-box" style="margin-top: 30px;">
-          <div class="league-header-title">
-            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo">
-            <span>PKO BP EKSTRAKLASA (SOBOTA, 10 PAŹDZIERNIKA)</span>
-          </div>
-          <div class="fixtures-grid">
-            <!-- MECZ 3: Cracovia - Zagłębie Lubin -->
-            <div class="match-card glass-panel" data-match-id="ekstra_m3">
+            <!-- HIT KOLEJKI: Legia Warszawa - Wisła Kraków -->
+            <div class="match-card glass-panel" data-match-id="legia_wisla" style="border: 2px solid #00ea90; box-shadow: 0 0 15px rgba(0, 234, 144, 0.5); width: 100%;">
+              <div style="text-align: center; color: #00ea90; font-weight: bold; margin-bottom: 10px; font-size: 0.95rem; letter-spacing: 1px;">
+                🔥 HIT KOLEJKI • KLASYK POLSKI
+              </div>
               <div class="match-info">
-                14:45 | <img src="https://assets.football-logos.cc/logos/poland/512x512/cracovia.54ff51f6.png" alt="Cracovia" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Cracovia - Zagłębie Lubin <img src="https://assets.football-logos.cc/logos/poland/512x512/zaglebie-lubin.c98d281b.png" alt="Zagłębie" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m3" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m3" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m3" value="2"> 2</label>
-              </div>
-            </div>
-
-            <!-- MECZ 4: Śląsk Wrocław - Lech Poznań -->
-            <div class="match-card glass-panel" data-match-id="ekstra_m4">
-              <div class="match-info">
-                17:30 | <img src="https://assets.football-logos.cc/logos/poland/512x512/slask.f9c23f09.png" alt="Śląsk" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Śląsk Wrocław - Lech Poznań <img src="https://assets.football-logos.cc/logos/poland/512x512/lech-poznan.bf7f2599.png" alt="Lech" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m4" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m4" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m4" value="2"> 2</label>
-              </div>
-            </div>
-
-            <!-- MECZ 5: Jagiellonia Białystok - Górnik Zabrze -->
-            <div class="match-card glass-panel" data-match-id="ekstra_m5">
-              <div class="match-info">
-                20:15 | <img src="https://assets.football-logos.cc/logos/poland/512x512/jagiellonia.f68c9def.png" alt="Jagiellonia" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Jagiellonia - Górnik Zabrze <img src="https://assets.football-logos.cc/logos/poland/512x512/gornik-zabrze.133dd2b5.png" alt="Górnik" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m5" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m5" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="ekstra_m5" value="2"> 2</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-<div class="league-box" style="margin-top: 30px;">
-          <div class="league-header-title">
-            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo">
-            <span>PKO BP EKSTRAKLASA (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
-          </div>
-          
-          <div class="fixtures-grid">
-            <!-- Forma podstawowa: podświetlone obramowanie i napis wewnątrz -->
-            <div class="match-card glass-panel" data-match-id="legia_wisla" style="border: 2px solid #00ea90; box-shadow: 0 0 15px rgba(0, 234, 144, 0.5);">
-              
-              <div style="text-align: center; color: #00ea90; font-weight: bold; margin-bottom: 10px; font-size: 0.9rem; letter-spacing: 1px;">
-                🔥 HIT KOLEJKI
-              </div>
-
-              <div class="match-info">
-                20:15 | <img src="legia-warszawa.png" alt="Legia" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;"> Legia Warszawa - Wisła Kraków <img src="wisla-krakow.png" alt="Wisła" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;">
+                20:15 | <img src="legia-warszawa.png" alt="Legia" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;" onerror="this.src='https://assets.football-logos.cc/logos/poland/512x512/legia-warszawa.f8165ab9.png'"> Legia Warszawa - Wisła Kraków <img src="wisla-krakow.png" alt="Wisła" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; vertical-align: middle; margin: 0 8px;" onerror="this.src='https://assets.football-logos.cc/logos/poland/512x512/wisla-krakow.4b839f95.png'">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="legia_wisla" value="1"> 1</label>
@@ -718,17 +668,16 @@ body.app-exit {
           </div>
         </div>
 
-
-        <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE -->
-        <div class="league-box">
+        <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE (NIEDZIELA, 11 PAŹDZIERNIKA) -->
+        <div class="league-box" style="margin-top: 25px;">
           <div class="league-header-title">
-            <img src="premier-league-logo.png" alt="Premier League" class="league-mini-logo">
-            <span>PREMIER LEAGUE (SOBOTA, 10 PAŹDZIERNIKA)</span>
+            <img src="premier-league-logo.png" alt="Premier League" class="league-mini-logo" onerror="this.src='https://assets.football-logos.cc/logos/england/512x512/english-premier-league.b597f797.png'">
+            <span>PREMIER LEAGUE (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
           </div>
           <div class="fixtures-grid">
             <div class="match-card glass-panel" data-match-id="pl_m1">
               <div class="match-info">
-                13:30 | <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Arsenal - Leeds United <img src="https://assets.football-logos.cc/logos/england/512x512/leeds-united.ce857129.png" alt="Leeds" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                15:00 | <img src="https://assets.football-logos.cc/logos/england/512x512/crystal-palace.feda4790.png" alt="Crystal Palace" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Crystal Palace - Nottingham Forest <img src="https://assets.football-logos.cc/logos/england/512x512/nottingham-forest.9a083644.png" alt="Nottingham" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="pl_m1" value="1"> 1</label>
@@ -736,9 +685,10 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="pl_m1" value="2"> 2</label>
               </div>
             </div>
+
             <div class="match-card glass-panel" data-match-id="pl_m2">
               <div class="match-info">
-                16:00 | <img src="https://assets.football-logos.cc/logos/england/512x512/aston-villa.ac06ff1f.png" alt="Aston Villa" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Aston Villa - Brentford <img src="https://assets.football-logos.cc/logos/england/512x512/brentford.b03c55b5.png" alt="Brentford" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                15:00 | <img src="https://upload.wikimedia.org/wikipedia/en/5/54/Hull_City_A.F.C._logo.svg" alt="Hull City" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Hull City - Everton <img src="https://assets.football-logos.cc/logos/england/512x512/everton.e756feed.png" alt="Everton" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="pl_m2" value="1"> 1</label>
@@ -746,9 +696,11 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="pl_m2" value="2"> 2</label>
               </div>
             </div>
-            <div class="match-card glass-panel" data-match-id="pl_m3">
+
+            <!-- HIT PREMIER LEAGUE -->
+            <div class="match-card glass-panel" data-match-id="pl_m3" style="border: 1px solid #00d4ff; box-shadow: 0 0 12px rgba(0, 212, 255, 0.35);">
               <div class="match-info">
-                16:00 | <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" alt="Chelsea" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Chelsea - Bournemouth <img src="https://assets.football-logos.cc/logos/england/512x512/bournemouth.2205e81a.png" alt="Bournemouth" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                17:30 | <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Liverpool - Manchester City <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="Man City" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="pl_m3" value="1"> 1</label>
@@ -756,49 +708,19 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="pl_m3" value="2"> 2</label>
               </div>
             </div>
-            <div class="match-card glass-panel" data-match-id="pl_m4">
-              <div class="match-info">
-                16:00 | <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg" alt="Ipswich" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Ipswich Town - Fulham <img src="https://assets.football-logos.cc/logos/england/512x512/fulham.a93cda89.png" alt="Fulham" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="pl_m4" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m4" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m4" value="2"> 2</label>
-              </div>
-            </div>
-            <div class="match-card glass-panel" data-match-id="pl_m5">
-              <div class="match-info">
-                16:00 | <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Logo_Sunderland.svg" alt="Sunderland" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Sunderland - Brighton <img src="https://assets.football-logos.cc/logos/england/512x512/brighton.b97367b5.png" alt="Brighton" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="pl_m5" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m5" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m5" value="2"> 2</label>
-              </div>
-            </div>
-            <div class="match-card glass-panel" data-match-id="pl_m6">
-              <div class="match-info">
-                18:30 | <img src="https://assets.football-logos.cc/logos/england/512x512/manchester-united.92071bee.png" alt="Man United" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Man United - Tottenham <img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg" alt="Tottenham" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="pl_m6" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m6" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="pl_m6" value="2"> 2</label>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- 🇮🇹 SERIE A -->
-        <div class="league-box">
+        <!-- 🇮🇹 SERIE A (NIEDZIELA, 11 PAŹDZIERNIKA) -->
+        <div class="league-box" style="margin-top: 25px;">
           <div class="league-header-title">
-            <img src="serie-a-logo.png" alt="Serie A" class="league-mini-logo">
-            <span>SERIE A (SOBOTA, 10 PAŹDZIERNIKA)</span>
+            <img src="serie-a-logo.png" alt="Serie A" class="league-mini-logo" onerror="this.src='https://assets.football-logos.cc/logos/italy/512x512/serie-a.1289b16a.png'">
+            <span>SERIE A (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
           </div>
           <div class="fixtures-grid">
             <div class="match-card glass-panel" data-match-id="seriea_m1">
               <div class="match-info">
-                15:00 | <img src="https://assets.football-logos.cc/logos/italy/512x512/genoa.521ea31d.png" alt="Genoa" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Genoa - Fiorentina <img src="fiorentina.png" alt="Fiorentina" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                12:30 | <img src="https://assets.football-logos.cc/logos/italy/512x512/como-1907.a4178b8a.png" alt="Como" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Como - AS Roma <img src="https://assets.football-logos.cc/logos/italy/512x512/roma.8dfa8968.png" alt="Roma" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m1" value="1"> 1</label>
@@ -806,9 +728,10 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m1" value="2"> 2</label>
               </div>
             </div>
+
             <div class="match-card glass-panel" data-match-id="seriea_m2">
               <div class="match-info">
-                18:00 | <img src="https://assets.football-logos.cc/logos/italy/512x512/inter.ba4c3469.png" alt="Inter" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Inter Mediolan - Parma <img src="https://assets.football-logos.cc/logos/italy/512x512/parma.cdd09d90.png" alt="Parma" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                15:00 | <img src="https://assets.football-logos.cc/logos/italy/512x512/lazio.db9df500.png" alt="Lazio" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> S.S. Lazio - AC Monza <img src="https://assets.football-logos.cc/logos/italy/512x512/monza.1a8203de.png" alt="Monza" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m2" value="1"> 1</label>
@@ -816,9 +739,10 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m2" value="2"> 2</label>
               </div>
             </div>
+
             <div class="match-card glass-panel" data-match-id="seriea_m3">
               <div class="match-info">
-                20:45 | <img src="napoli.png" alt="Napoli" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> SSC Napoli - Frosinone <img src="https://assets.football-logos.cc/logos/italy/512x512/frosinone.7c7fa08c.png" alt="Frosinone" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                15:00 | <img src="https://assets.football-logos.cc/logos/italy/512x512/lecce.7d6b74f5.png" alt="Lecce" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> US Lecce - Bologna FC <img src="https://assets.football-logos.cc/logos/italy/512x512/bologna.a91a07cf.png" alt="Bologna" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m3" value="1"> 1</label>
@@ -826,19 +750,41 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="seriea_m3" value="2"> 2</label>
               </div>
             </div>
+
+            <div class="match-card glass-panel" data-match-id="seriea_m4">
+              <div class="match-info">
+                18:00 | <img src="https://assets.football-logos.cc/logos/italy/512x512/sassuolo.b1b99656.png" alt="Sassuolo" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> US Sassuolo - AC Milan <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg" alt="Milan" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+              </div>
+              <div class="bet-btn-group">
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m4" value="1"> 1</label>
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m4" value="X"> X</label>
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m4" value="2"> 2</label>
+              </div>
+            </div>
+
+            <div class="match-card glass-panel" data-match-id="seriea_m5">
+              <div class="match-info">
+                20:45 | <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Cagliari_Calcio_1920.svg" alt="Cagliari" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Cagliari Calcio - Juventus <img src="https://assets.football-logos.cc/logos/italy/512x512/juventus.4efced70.png" alt="Juventus" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px; filter: brightness(0) invert(1);">
+              </div>
+              <div class="bet-btn-group">
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m5" value="1"> 1</label>
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m5" value="X"> X</label>
+                <label class="bet-radio-btn"><input type="radio" name="seriea_m5" value="2"> 2</label>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- 🇩🇪 BUNDESLIGA -->
-        <div class="league-box">
+        <!-- 🇩🇪 BUNDESLIGA (NIEDZIELA, 11 PAŹDZIERNIKA) -->
+        <div class="league-box" style="margin-top: 25px;">
           <div class="league-header-title">
-            <img src="bundesliga-logo.png" alt="Bundesliga" class="league-mini-logo">
-            <span>BUNDESLIGA (SOBOTA, 10 PAŹDZIERNIKA)</span>
+            <img src="bundesliga-logo.png" alt="Bundesliga" class="league-mini-logo" onerror="this.src='https://assets.football-logos.cc/logos/germany/512x512/bundesliga.24d9c6f9.png'">
+            <span>BUNDESLIGA (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
           </div>
           <div class="fixtures-grid">
             <div class="match-card glass-panel" data-match-id="bundes_m1">
               <div class="match-info">
-                15:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/mainz-05.a086fb18.png" alt="Mainz" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> FSV Mainz - Bayer Leverkusen <img src="bayer-leverkusen.png" alt="Bayer" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                15:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/koln.4221251d.png" alt="Köln" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> 1. FC Köln - Borussia M'gladbach <img src="https://assets.football-logos.cc/logos/germany/512x512/borussia-monchengladbach.452424e7.png" alt="M'gladbach" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="bundes_m1" value="1"> 1</label>
@@ -846,9 +792,10 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="bundes_m1" value="2"> 2</label>
               </div>
             </div>
+
             <div class="match-card glass-panel" data-match-id="bundes_m2">
               <div class="match-info">
-                15:30 | <img src="hoffenheim.png" alt="Hoffenheim" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Hoffenheim - Hamburger SV <img src="https://assets.football-logos.cc/logos/germany/512x512/hamburger-sv.6a4c40a6.png" alt="Hamburger SV" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                17:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/freiburg.40e62d41.png" alt="Freiburg" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> SC Freiburg - FC Schalke 04 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/FC_Schalke_04_Logo.svg" alt="Schalke" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="bundes_m2" value="1"> 1</label>
@@ -856,59 +803,19 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="bundes_m2" value="2"> 2</label>
               </div>
             </div>
-            <div class="match-card glass-panel" data-match-id="bundes_m3">
-              <div class="match-info">
-                15:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/union-berlin.484bbfaa.png" alt="Union Berlin" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Union Berlin - Elversberg <img src="https://assets.football-logos.cc/logos/germany/512x512/sv-elversberg.f52c2cf6.png" alt="Elversberg" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m3" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m3" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m3" value="2"> 2</label>
-              </div>
-            </div>
-            <div class="match-card glass-panel" data-match-id="bundes_m4">
-              <div class="match-info">
-                15:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/paderborn.7a64d8e2.png" alt="Paderborn" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Paderborn - VfB Stuttgart <img src="stuttgart.png" alt="Stuttgart" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m4" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m4" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m4" value="2"> 2</label>
-              </div>
-            </div>
-            <div class="match-card glass-panel" data-match-id="bundes_m5">
-              <div class="match-info">
-                15:30 | <img src="https://assets.football-logos.cc/logos/germany/512x512/augsburg.75361590.png" alt="Augsburg" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> FC Augsburg - Bayern Monachium <img src="https://assets.football-logos.cc/logos/germany/512x512/bayern-munchen.8eda8ecc.png" alt="Bayern" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m5" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m5" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m5" value="2"> 2</label>
-              </div>
-            </div>
-            <div class="match-card glass-panel" data-match-id="bundes_m6">
-              <div class="match-info">
-                18:30 | <img src="rb-leipzig.png" alt="RB Leipzig" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> RB Leipzig - Eintracht <img src="https://assets.football-logos.cc/logos/germany/512x512/eintracht-frankfurt.422e036d.png" alt="Eintracht" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-              </div>
-              <div class="bet-btn-group">
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m6" value="1"> 1</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m6" value="X"> X</label>
-                <label class="bet-radio-btn"><input type="radio" name="bundes_m6" value="2"> 2</label>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- 🇪🇸 LA LIGA -->
-        <div class="league-box">
+        <!-- 🇪🇸 LA LIGA (NIEDZIELA, 11 PAŹDZIERNIKA) -->
+        <div class="league-box" style="margin-top: 25px;">
           <div class="league-header-title">
-            <img src="la-liga-logo.png" alt="La Liga" class="league-mini-logo">
-            <span>LA LIGA EA SPORTS ⚡ (SOBOTA, 10 PAŹDZIERNIKA)</span>
+            <img src="la-liga-logo.png" alt="La Liga" class="league-mini-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/512px-LaLiga_logo_2023.svg.png'">
+            <span>LA LIGA EA SPORTS ⚡ (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
           </div>
           <div class="fixtures-grid">
             <div class="match-card glass-panel" data-match-id="laliga_m1">
               <div class="match-info">
-                18:30 | <img src="barcelona.png" alt="Barcelona" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> FC Barcelona - Getafe <img src="https://assets.football-logos.cc/logos/spain/512x512/getafe.8b79883e.png" alt="Getafe" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                14:00 | <img src="https://assets.football-logos.cc/logos/spain/512x512/elche.544fba10.png" alt="Elche" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Elche CF - Celta Vigo <img src="https://upload.wikimedia.org/wikipedia/en/1/12/RC_Celta_de_Vigo_logo.svg" alt="Celta" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="laliga_m1" value="1"> 1</label>
@@ -916,9 +823,10 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="laliga_m1" value="2"> 2</label>
               </div>
             </div>
+
             <div class="match-card glass-panel" data-match-id="laliga_m2">
               <div class="match-info">
-                21:00 | <img src="real-madryt.png" alt="Real Madryt" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Real Madryt - Villarreal <img src="https://assets.football-logos.cc/logos/spain/512x512/villarreal.dca647c8.png" alt="Villarreal" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+                16:15 | <img src="https://upload.wikimedia.org/wikipedia/en/f/f1/Real_Sociedad_logo.svg" alt="Real Sociedad" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Real Sociedad - Deportivo La Coruña <img src="https://assets.football-logos.cc/logos/spain/512x512/deportivo-la-coruna.2a147b0c.png" alt="Deportivo" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
               </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="laliga_m2" value="1"> 1</label>
@@ -926,10 +834,32 @@ body.app-exit {
                 <label class="bet-radio-btn"><input type="radio" name="laliga_m2" value="2"> 2</label>
               </div>
             </div>
+
+            <div class="match-card glass-panel" data-match-id="laliga_m3">
+              <div class="match-info">
+                18:30 | <img src="https://assets.football-logos.cc/logos/spain/512x512/real-betis.d101bd6c.png" alt="Betis" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Real Betis - CA Osasuna <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Osasuna_logo.svg" alt="Osasuna" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+              </div>
+              <div class="bet-btn-group">
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m3" value="1"> 1</label>
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m3" value="X"> X</label>
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m3" value="2"> 2</label>
+              </div>
+            </div>
+
+            <div class="match-card glass-panel" data-match-id="laliga_m4">
+              <div class="match-info">
+                21:00 | <img src="https://assets.football-logos.cc/logos/spain/512x512/racing.0dcda955.png" alt="Racing" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Racing Santander - Valencia CF <img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Valenciacf.svg" alt="Valencia" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
+              </div>
+              <div class="bet-btn-group">
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m4" value="1"> 1</label>
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m4" value="X"> X</label>
+                <label class="bet-radio-btn"><input type="radio" name="laliga_m4" value="2"> 2</label>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="typer-action-box glass-panel" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; border: 1px solid rgba(0, 212, 255, 0.5); border-radius: 12px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.15), inset 0 0 10px rgba(0, 212, 255, 0.05); background: rgba(15, 23, 42, 0.6);">
+        <div class="typer-action-box glass-panel" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; border: 1px solid rgba(0, 212, 255, 0.5); border-radius: 12px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.15), inset 0 0 10px rgba(0, 212, 255, 0.05); background: rgba(15, 23, 42, 0.6); margin-top: 25px;">
           <div style="display: flex; gap: 15px; flex-wrap: wrap;">
             <!-- Pole na Nick -->
             <input type="text" id="user-nick" class="typer-input" placeholder="👤 Twój Nick (np. Mistrz_Kuponu)" required style="flex: 1; min-width: 220px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: #fff;">

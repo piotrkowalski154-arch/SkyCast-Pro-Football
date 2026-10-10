@@ -535,7 +535,7 @@ body.app-exit {
     box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4); 
     overflow: hidden;
     animation: slideUp 0.5s ease-out forwards, neonPulse 3s ease-in-out infinite 0.5s;
-    transform: scale(1.09);
+    transform: scale(1.03);
 }
 
 .sport-radar-container img {
@@ -543,25 +543,11 @@ body.app-exit {
     width: 100%;     
     height: auto;
     box-sizing: border-box; 
-    transform: scale(1.03;
+    transform: scale(1.03);
 }
 
 
-    /* =========================================
-       AKTUALIZACJA 1: NEONOWY BLASK WYBRANEGO TYPU
-       ========================================= */
-    .bet-radio-btn:has(input[type="radio"]:checked) {
-      background: rgba(0, 234, 144, 0.25) !important;
-      border-color: #00ea90 !important;
-      color: #ffffff !important;
-      box-shadow: 0 0 15px rgba(0, 234, 144, 0.4), inset 0 0 10px rgba(0, 234, 144, 0.2) !important;
-      transform: scale(1.05); /* Lekko powiększa wybrany typ */
-    }
-    
-    .bet-radio-btn:has(input[type="radio"]:checked) input[type="radio"] {
-      accent-color: #00ea90 !important;
-    }
-    
+
 
 
 
@@ -629,9 +615,9 @@ body.app-exit {
       <p class="section - title" style="margin-top: 17px; color:#ffcc00; font-size: 1.1rem;">
         ⚡ Wytypuj najgorętsze hity kolejki, dorzuć swój autorski pomysł na rozwój SkyCast Pro Football i zgarnij respekt w rankingu! 🚀
       </p>
-    
-        
 
+      <form id="typer-form">
+    
         <div class="league-box">
           <div class="league-header-title">
             <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo" style="margin-top: 30px;">
@@ -651,7 +637,7 @@ body.app-exit {
             <div class="match-card glass-panel" data-match-id="ekstra_m2">
               <div class="match-info">
                 20:30 | <img src="rakow-czestochowa.png" alt="Raków" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;"> Raków - GKS Katowice <img src="gks-katowice.png" alt="GKS" class="team-badge-mini" style="width: 35px; height: 35px; object-fit: contain; vertical-align: middle; margin: 0 8px;">
-         </div>
+              </div>
               <div class="bet-btn-group">
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m2" value="1"> 1</label>
                 <label class="bet-radio-btn"><input type="radio" name="ekstra_m2" value="X"> X</label>
@@ -706,17 +692,11 @@ body.app-exit {
           </div>
         </div>
 
-<!-- MAGICZNA, ŚWIECĄCA RAMKA CAŁEJ SEKCJI -->
-<div class="league-box" style="margin-top: 30px; padding: 15px; background: rgba(10, 15, 25, 0.6); border: 2px solid #00d4ff; border-radius: 16px; box-shadow: 0 0 25px rgba(0, 212, 255, 0.35), inset 0 0 15px rgba(0, 212, 255, 0.2); backdrop-filter: blur(12px);">
-  
-  <!-- PODKREŚLONY, NEONOWY NAGŁÓWEK -->
-  <div class="league-header-title" style="border-bottom: 2px solid rgba(0, 212, 255, 0.8); padding-bottom: 12px; margin-bottom: 15px; box-shadow: 0 15px 20px -15px rgba(0, 212, 255, 0.7);">
-    <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo">
-    <span style="color: #ffffff; text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.5); letter-spacing: 1px; font-weight: 800;">PKO BP EKSTRAKLASA (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
-  </div>
-
-  <!-- Poniżej zostawiasz swój div class="fixtures-grid" i szklane kafelki meczów
-      
+<div class="league-box" style="margin-top: 30px;">
+          <div class="league-header-title">
+            <img src="ekstraklasa-logo.png" alt="Ekstraklasa" class="league-mini-logo">
+            <span>PKO BP EKSTRAKLASA (NIEDZIELA, 11 PAŹDZIERNIKA)</span>
+          </div>
           
           <div class="fixtures-grid">
             <!-- Forma podstawowa: podświetlone obramowanie i napis wewnątrz -->
@@ -736,7 +716,7 @@ body.app-exit {
               </div>
             </div>
           </div>
-        
+        </div>
 
 
         <!-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE -->
@@ -1271,7 +1251,7 @@ body.app-exit {
   <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
     <div style="display: flex; align-items: center; gap: 10px;">
       <span style="font-size: 1.3em;">📡</span>
-      <span style="font-weight: 900; font-size: 1.20em; letter-spacing: 1px; text-transform: uppercase;">
+      <span style="font-weight: 900; font-size: 1.18em; letter-spacing: 1px; text-transform: uppercase;">
         <span class="blue-gradient">RADAR</span> <span class="gold-gradient">WIADOMOŚCI</span>
       </span>
     </div>
@@ -1293,43 +1273,44 @@ body.app-exit {
     <!-- ================= STREFA WIDEO: PKO BP EKSTRAKLASA ================= -->
     <section class="window video-section">
       <div class="section-title">
-        <span class="fire-emoji">📺</span> STREFA WIDEO: PKO BP EKSTRAKLASA (10. KOLEJKA)
+        <span class="fire-emoji">📺</span> STREFA WIDEO: PKO BP EKSTRAKLASA (9. KOLEJKA)
       </div>
       <p class="section-desc" style="color: hwb(169 0% 0%); text-shadow: 0 0 8px rgba(255, 204, 0, 0.4); margin-bottom: 20px;">Otwarta Garda na polskich boiskach – najgorętsze skróty i bramki!</p>
 
-      
+      <div class="video-grid">
+        <!-- MAGAZYN LIGOWY -->
+        <div class="video-card glass-panel" style="padding: 16px; border-radius: 16px; background: rgba(18, 26, 43, 0.85); border: 1px solid rgba(0, 212, 255, 0.25); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <div class="video-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <img src="https://assets.football-logos.cc/logos/poland/512x512/ekstraklasa.4bd2cb11.png" alt="Ekstraklasa" style="width: 24px; height: 24px; object-fit: contain; flex-shrink: 0;">
+              <span class="video-league-name" style="color: #00d4ff; font-weight: 800; font-size: 0.85em; letter-spacing: 0.5px; text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);">
+                PKO BP EKSTRAKLASA • MAGAZYN LIGOWY
+              </span>
+            </div>
+            <span style="font-size: 0.65em; color: #ff334b; background: rgba(255, 51, 75, 0.15); border: 1px solid #ff334b; padding: 2px 8px; border-radius: 8px; font-weight: bold; text-transform: uppercase;">
+              39 GOLI
+            </span>
+          </div>
 
-        
+          <div class="iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+            <iframe 
+              src="https://www.youtube.com/embed/vx9kNxglEXU" 
+              title="Aż 39 GOLI! | TOP MOMENTY 9. kolejki PKO BP Ekstraklasy" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
 
           <div class="video-match-title" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 14px;">
             <span style="font-weight: 800; font-size: 1.05em; color: #fff; letter-spacing: 0.5px; text-transform: uppercase;">
-              TOP MOMENTY: 10. KOLEJKA
+              TOP MOMENTY: 9. KOLEJKA
             </span>
             <span style="font-size: 0.75em; color: #94a3b8; margin-top: 4px;">
               Wszystkie bramki, asysty i kluczowe sytuacje minionego weekendu
             </span>
           </div>
         </div>
-
-  <div class="video-card glass-panel">
-          <div class="video-header">
-            <img src="https://assets.football-logos.cc/logos/poland/512x512/ekstraklasa.4bd2cb11.png" alt="Ekstraklasa" class="video-league-logo">
-            <span class="video-league-name extra-neon">PKO BP EKSTRAKLASA</span>
-          </div>
-
-<div class="iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-  <iframe 
-    src="https://www.youtube.com/embed/RukTIc01kl4" 
-    title="Wieczysta Kraków - Wisła Płock | SKRÓT | Ekstraklasa 2026/27" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</div>
-        
-
-
-        
         
         <!-- KARTA 1: Wisła Kraków - Śląsk Wrocław -->
         <div class="video-card glass-panel">
@@ -1345,8 +1326,19 @@ body.app-exit {
           </div>
         </div>
 
-        
-        
+        <!-- KARTA 2: GKS Katowice - Cracovia -->
+        <div class="video-card glass-panel">
+          <div class="video-header">
+            <img src="https://assets.football-logos.cc/logos/poland/512x512/ekstraklasa.4bd2cb11.png" alt="Ekstraklasa" class="video-league-logo">
+            <span class="video-league-name extra-neon">PKO BP EKSTRAKLASA</span>
+          </div>
+          <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/wEGUKxtwEr8" title="Skrót meczu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-match-title">
+            <img src="https://assets.football-logos.cc/logos/poland/512x512/katowice.bc649b50.png" class="tiny-logo" onerror="this.style.display='none'"> GKS Katowice vs Cracovia <img src="cracovia.png" class="tiny-logo">
+          </div>
+        </div>
 
         <!-- KARTA 3: Jagiellonia vs Legia -->
         <div class="video-card glass-panel">
@@ -2630,14 +2622,12 @@ body.app-exit {
     const form = document.getElementById('typer-form');
     const recentVotesList = document.getElementById('recent-votes-list');
 
-        // ==========================================
-    // 1. WYSYŁANIE TYPÓW (NOWY, PANCERNY SILNIK 1-X-2)
     // ==========================================
-    const submitBtn = document.getElementById('typer-submit-btn');
-
-    if (submitBtn) {
-      submitBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // Powstrzymujemy odświeżenie strony
+    // 1. WYSYŁANIE TYPÓW (NOWY SILNIK 1-X-2)
+    // ==========================================
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
         const nick = document.getElementById('user-nick').value.trim();
         if (!nick) return alert('Wpisz swój Nick, bracie!');
@@ -2645,8 +2635,8 @@ body.app-exit {
         const suggestionInput = document.getElementById('app-suggestion');
         const suggestion = suggestionInput ? suggestionInput.value.trim() : '';
 
-        // Zbieramy zaznaczone typy z CAŁEJ strony, a nie tylko z formularza
-        const zaznaczoneTypy = document.querySelectorAll('input[type="radio"]:checked');
+        // Zbieramy zaznaczone typy szukając TYLKO wewnątrz formularza
+        const zaznaczoneTypy = form.querySelectorAll('input[type="radio"]:checked');
         const typyUzytkownika = {};
 
         zaznaczoneTypy.forEach((radio) => {
@@ -2656,38 +2646,6 @@ body.app-exit {
         if (Object.keys(typyUzytkownika).length === 0) {
           return alert('Zaznacz wynik chociaż jednego meczu!');
         }
-
-        const voteData = {
-          nick: nick,
-          suggestion: suggestion,
-          typy: typyUzytkownika,
-          timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'}),
-          createdAt: Date.now()
-        };
-
-        // Blokujemy guzik
-        submitBtn.disabled = true;
-
-        push(ref(db, 'votes'), voteData)
-          .then(() => {
-            alert('Ogień! Twoje typy i pomysł wjechały do bazy! 🚀');
-            
-            // Czyszczenie po wysłaniu
-            document.getElementById('user-nick').value = '';
-            if(suggestionInput) suggestionInput.value = '';
-            zaznaczoneTypy.forEach(radio => radio.checked = false);
-          })
-          .catch((err) => {
-            console.error(err);
-            alert('Błąd zapisu: ' + err.message);
-          })
-          .finally(() => {
-            // Odblokowujemy guzik
-            submitBtn.disabled = false;
-          });
-      });
-    }
-    
 
         const voteData = {
           nick: nick,

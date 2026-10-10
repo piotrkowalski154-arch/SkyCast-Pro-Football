@@ -2630,12 +2630,14 @@ body.app-exit {
     const form = document.getElementById('typer-form');
     const recentVotesList = document.getElementById('recent-votes-list');
 
+        // ==========================================
+    // 1. WYSYŁANIE TYPÓW (NOWY, PANCERNY SILNIK 1-X-2)
     // ==========================================
-    // 1. WYSYŁANIE TYPÓW (NOWY SILNIK 1-X-2)
-    // ==========================================
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    const submitBtn = document.getElementById('typer-submit-btn');
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Powstrzymujemy odświeżenie strony
 
         const nick = document.getElementById('user-nick').value.trim();
         if (!nick) return alert('Wpisz swój Nick, bracie!');
@@ -2643,8 +2645,8 @@ body.app-exit {
         const suggestionInput = document.getElementById('app-suggestion');
         const suggestion = suggestionInput ? suggestionInput.value.trim() : '';
 
-        // Zbieramy zaznaczone typy szukając TYLKO wewnątrz formularza
-        const zaznaczoneTypy = form.querySelectorAll('input[type="radio"]:checked');
+        // Zbieramy zaznaczone typy z CAŁEJ strony, a nie tylko z formularza
+        const zaznaczoneTypy = document.querySelectorAll('input[type="radio"]:checked');
         const typyUzytkownika = {};
 
         zaznaczoneTypy.forEach((radio) => {
@@ -2654,6 +2656,38 @@ body.app-exit {
         if (Object.keys(typyUzytkownika).length === 0) {
           return alert('Zaznacz wynik chociaż jednego meczu!');
         }
+
+        const voteData = {
+          nick: nick,
+          suggestion: suggestion,
+          typy: typyUzytkownika,
+          timestamp: new Date().toLocaleDateString('pl-PL') + ' ' + new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'}),
+          createdAt: Date.now()
+        };
+
+        // Blokujemy guzik
+        submitBtn.disabled = true;
+
+        push(ref(db, 'votes'), voteData)
+          .then(() => {
+            alert('Ogień! Twoje typy i pomysł wjechały do bazy! 🚀');
+            
+            // Czyszczenie po wysłaniu
+            document.getElementById('user-nick').value = '';
+            if(suggestionInput) suggestionInput.value = '';
+            zaznaczoneTypy.forEach(radio => radio.checked = false);
+          })
+          .catch((err) => {
+            console.error(err);
+            alert('Błąd zapisu: ' + err.message);
+          })
+          .finally(() => {
+            // Odblokowujemy guzik
+            submitBtn.disabled = false;
+          });
+      });
+    }
+    
 
         const voteData = {
           nick: nick,
